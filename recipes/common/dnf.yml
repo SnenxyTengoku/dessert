@@ -119,6 +119,7 @@ install:
     - genisoimage
     - gnome-themes-extra
     - hunspell-en
+    - iwd
     - libguestfs
     - lzip
     - net-tools
