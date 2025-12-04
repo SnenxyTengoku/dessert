@@ -10,7 +10,7 @@ configurations:
       # internet and chat
       - chat.delta.desktop
       - io.github.kukuruzka165.materialgram
-      - org.equicord.equibop
+      - io.github.moonlight_mod.moonlight-installer
       - org.gajim.Gajim
       - org.nicotine_plus.Nicotine
       - org.qbittorrent.qBittorrent
@@ -36,7 +36,7 @@ configurations:
       - org.kde.krita
       - org.mattbas.Glaxnimate
       - org.tenacityaudio.Tenacity
-      - org.tuxpaint.Tuxpaint # i'm not kidding when i say this tuxpaint is actually fucking goated look through https://tuxpaint.org/gallery/
+      - org.tuxpaint.Tuxpaint
 
       # (desktop) utilities
       - com.bitwarden.desktop
@@ -80,3 +80,11 @@ configurations:
       - com.github.tchx84.Flatseal
       - io.github.thetumultuousunicornofdarkness.cpu-x
       - org.gustavoperedo.FontDownloader
+  - notify: false
+    scope: user
+    repo:
+      url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      name: flathub-user
+      title: "Flathub (User)"
+    install:
+      - com.discordapp.Discord # we use the moonlight mod, which requires discord installed as a user package
