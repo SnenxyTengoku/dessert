@@ -37,7 +37,7 @@ modules:
       # catppuccin
       - catppuccin/plasma.sh
       # ---
-      - flavor/wuzetka.sh
+      - flavors/wuzetka.sh
 
   # post-run
   - from-file: shared/fonts.yml # fonts
