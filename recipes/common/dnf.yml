@@ -2,7 +2,6 @@ type: dnf
 repos:
   nonfree: negativo17
   copr:
-    - pesader/hblock
     - wezfurlong/wezterm-nightly
     - wojnilowicz/ungoogled-chromium
   files:
@@ -52,7 +51,6 @@ install:
     # environment
     - crontabs
     - gamescope
-    - hblock
     - helvum
     - mangohud
     - playerctl

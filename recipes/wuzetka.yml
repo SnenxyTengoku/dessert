@@ -60,7 +60,6 @@ modules:
   - type: systemd
     system:
       enabled:
-        - hblock.timer
         - tailscaled.service
         - libvirtd.service
         - dnsmasq.service
