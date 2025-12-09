@@ -7,8 +7,6 @@ description: sneexy's personal and opinionated kinoite image
 base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 43 # latest is also supported if you want new updates ASAP
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   # packages
   - from-file: packages/dnf.yml
@@ -21,32 +19,20 @@ modules:
       - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/usr /usr
       - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/etc /etc
 
-  - type: script
-    scripts:
-      # are these even required anymore lol
-      - ld.sh
-      - qdbus.sh
-      - firmware-finalize.sh
-      # customization
-      - sddm-astronaut-theme.sh
-      - posy-cursors.sh
-      - papirus.sh
-      # catppuccin
-      - catppuccin/plasma.sh
-      - catppuccin/papirus.sh
-      # fixes
-      - vscodium.sh
-      - lazyvim.sh
-      # various additions
-      - flac2opus.sh
-      - just.sh
-      # ---
-      - flavor/wuzetka.sh
-
   - from-file: shared/fonts.yml # fonts
   - from-file: shared/bling.yml # ublue bling selection
+  - from-file: shared/scripts.yml # default scripts selection
   - from-file: shared/files.yml # shared base filesystem
   - from-file: shared/systemd.yml # default systemd services
+
+  - type: script
+    scripts:
+      # customization
+      - additions/sddm-astronaut-theme.sh
+      # catppuccin
+      - catppuccin/plasma.sh
+      # ---
+      - flavor/wuzetka.sh
 
   # wuzetka files
   - type: files
