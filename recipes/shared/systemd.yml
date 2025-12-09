@@ -4,6 +4,8 @@ system:
     - tailscaled.service
     - libvirtd.service
     - dnsmasq.service
+  masked:
+    - wpa_supplicant.service
 user:
   enabled:
     - mpd.service

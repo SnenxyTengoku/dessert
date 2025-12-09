@@ -127,11 +127,6 @@ modules:
         - tesseract
         - unrar
         - util-linux
-    remove:
-      auto-remove: false
-      packages:
-        # we use iwd with networkmanager, remove wpa_supplicant to prevent conflicts
-        - wpa_supplicant
 
   - type: dnf
     repos:
