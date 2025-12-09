@@ -14,8 +14,8 @@ FROM fedora:${IMAGE_MAJOR_VERSION} as catppuccin
 # GTK Theme
 COPY files/scripts/build-scripts /tmp/build-scripts
 
-RUN chmod +x /tmp/build-scripts/catppuccin-gtk.sh && \
-    /tmp/build-scripts/catppuccin-gtk.sh
+RUN chmod +x /tmp/build-scripts/catppuccin/gtk.sh && \
+    /tmp/build-scripts/catppuccin/gtk.sh
 
 # Packages built with cargo/rust
 FROM fedora:${IMAGE_MAJOR_VERSION} as cargo
