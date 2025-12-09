@@ -1,6 +1,0 @@
-type: os-release
-properties:
-  ID_LIKE: fedora
-  ID: wuzetka
-  NAME: Wuzetka
-  PRETTY_NAME: Wuzetka, Based on Fedora Kinoite

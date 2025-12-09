@@ -1,7 +1,0 @@
-# akmods. from ublue. drivers and stuff or something like that idk
-type: akmods
-base: main
-install:
-    - xone
-    - xpadneo
-    - v4l2loopback

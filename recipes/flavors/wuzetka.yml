@@ -5,18 +5,15 @@ description: sneexy's personal and opinionated kinoite image
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: 43 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: bling
-    install:
-      - dconf-update-service
-
-  - from-file: common/dnf.yml
-  - from-file: common/wuzetka/dnf.yml
-  - from-file: common/mpd.yml
+  # packages
+  - from-file: packages/dnf.yml
+  - from-file: packages/wuzetka/dnf.yml
+  - from-file: packages/flatpaks.yml
 
   # copy files and software from helper images
   - type: containerfile
@@ -46,34 +43,16 @@ modules:
       # ---
       - flavor/wuzetka.sh
 
-  # shared base filesystem
-  - type: files
-    files:
-      - source: system/base
-        destination: /
+  - from-file: shared/fonts.yml # fonts
+  - from-file: shared/bling.yml # ublue bling selection
+  - from-file: shared/files.yml # shared base filesystem
+  - from-file: shared/systemd.yml # default systemd services
 
   # wuzetka files
   - type: files
     files:
       - source: system/wuzetka
         destination: /
-
-  - from-file: common/flatpaks.yml
-  - from-file: common/fonts.yml
-
-  - type: systemd
-    system:
-      enabled:
-        - tailscaled.service
-        - libvirtd.service
-        - dnsmasq.service
-    user:
-      enabled:
-        - mpd.service
-        - mpdris2-rs.service
-        - music-discord-rpc.service
-        - rescrobbled.service
-        - systemd-tmpfiles-setup.service
 
   - type: gschema-overrides
     include:

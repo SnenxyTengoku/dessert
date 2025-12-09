@@ -1,0 +1,13 @@
+type: systemd
+system:
+  enabled:
+    - tailscaled.service
+    - libvirtd.service
+    - dnsmasq.service
+user:
+  enabled:
+    - mpd.service
+    - mpdris2-rs.service
+    - music-discord-rpc.service
+    - rescrobbled.service
+    - systemd-tmpfiles-setup.service

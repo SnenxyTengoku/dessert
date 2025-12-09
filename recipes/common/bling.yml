@@ -1,5 +1,0 @@
-# configure what to pull in from ublue-os/bling
-type: bling
-install:
-    - dconf-update-service
-    - ublue-update
