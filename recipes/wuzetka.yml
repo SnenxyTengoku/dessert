@@ -22,6 +22,7 @@ modules:
     scripts:
       - ld.sh
       - qdbus.sh
+      - bazzite-firmware.sh
       - sddm-astronaut-theme.sh
       - catppuccin-plasma-install.sh
       - papirus.sh
