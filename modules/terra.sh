@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Tell build process to exit if there are any errors.
+
 set -euo pipefail
 
 TERRA_REPO_FILE="$(awk -F'=' '$1 == "name" && $2 == "Terra $releasever" {print FILENAME}' /etc/yum.repos.d/*)"

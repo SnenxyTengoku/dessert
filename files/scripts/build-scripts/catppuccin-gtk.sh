@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Tell build process to exit if there are any errors.
+
 set -euo pipefail
 
 # Originally, this script used the official catppuccin gtk repo, but that has since been archived.

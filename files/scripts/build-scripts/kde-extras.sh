@@ -5,7 +5,7 @@
 #
 
 
-# Tell build process to exit if there are any errors.
+
 set -euo pipefail
 
 # Create directory where all compiled things go into

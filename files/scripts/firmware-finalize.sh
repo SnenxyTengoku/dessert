@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Tell build process to exit if there are any errors.
+
 set -euox pipefail
 
 git clone https://github.com/hhd-dev/hwfirm /tmp/hwfirm --depth 1
