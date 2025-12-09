@@ -12,7 +12,7 @@ modules:
   - from-file: packages/dnf.yml # base package selection
   - from-file: packages/wuzetka/dnf.yml # wuzetka package selection
   - from-file: packages/flatpaks.yml # base default flatpaks
-  - from-file: kernels/cachy.yml # cachy kernel
+  - from-file: kernels/bazzite.yml # bazzite kernel
 
   # copy files and software from helper images
   - type: containerfile
