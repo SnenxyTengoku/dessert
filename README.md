@@ -4,32 +4,32 @@ Custom [Atomic](https://docs.fedoraproject.org/en-US/emerging) [Fedora](https://
 
 Named Dessert, because they are sweet. `:]]`
 
-These images are heavily opinionated and customized, mainly only meant for personal use, but are available for other's use if preferred.
+These flavors <small>(otherwise *"images"*, but like, y'know, dessert)*</small> are heavily opinionated and customized, mainly only meant for personal use, but are available for other's use if preferred.
 
 I don't provide support or anything - these are for myself, anyways.
 
 ## Wuzetka <sub>`wuzetka`</sub>
 
-My main customized image, based on Fedora Kinoite (KDE Plasma). Focused on a fully personalized custom experience, themed around based on the Catppuccin Mocha theme with the Green accent color. Given a modern, flat look out of the box.
+My main customized flavor, based on Fedora Kinoite (KDE Plasma). Focused on a fully personalized custom experience, themed around based on the Catppuccin Mocha theme with the Green accent color. Given a modern, flat look out of the box.
 
 Features many extensions on the Plasma desktop and custom utilities and tools for general use and gaming.
 
 > [!CAUTION]
-> [Generating an ISO](https://blue-build.org/how-to/generate-iso/) to use to install this image <b>may not work or function/install correctly</b>. I recommend installing vanilla Fedora Kinoite first then [rebasing](#installation) to this image afterwards.
+> [Generating an ISO](https://blue-build.org/how-to/generate-iso/) to use to install this flavor <b>may not work or function/install correctly</b>. I recommend installing vanilla Fedora Kinoite first then [rebasing](#installation) to this flavor afterwards.
 
 ### Wuzetka Validity <sub>`wuzetka-validity`</sub>
 
-The same image as Wuzetka, but it replaces `fprintd` packages with [python-validity](https://github.com/uunicorn/python-validity) to allow support for using "unsupported" fingerprint sensors on certain devices, such as the Thinkpad T480.
+The same flavor as Wuzetka, but it replaces `fprintd` packages with [python-validity](https://github.com/uunicorn/python-validity) to allow support for using "unsupported" fingerprint sensors on certain devices, such as the Thinkpad T480.
 
 ### `arch-wuzetka`
 
-Custom Arch Linux image made for use <i>strictly</i> with Distrobox. Just includes most of the same CLI utilities from Wuzetka to provide a more seamless, integrated experience.
+Custom Arch Linux flavor made for use <i>strictly</i> with Distrobox. Just includes most of the same CLI utilities from Wuzetka to provide a more seamless, integrated experience.
 
 ## Mazurek <sub>`mazurek`</sub>
 
 <b>[WIP: Non existent currently.]</b>
 
-Another customized image in the same flavor of Wuzetka, but based on Fedora Silverblue and focusing on customizing and extending the GNOME desktop environment.
+Another customized flavor in the same flavor of Wuzetka, but based on Fedora Silverblue and focusing on customizing and extending the GNOME desktop environment.
 
 ## Installation
 
@@ -38,17 +38,17 @@ Another customized image in the same flavor of Wuzetka, but based on Fedora Silv
 
 To rebase an existing atomic Fedora installation to the latest build:
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+- First rebase to the unsigned flavor, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/SnenxyTengoku/<image>:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/SnenxyTengoku/<flavor>:latest
   ```
 - Reboot to complete the rebase:
   ```
   systemctl reboot
   ```
-- Then rebase to the signed image, like so:
+- Then rebase to the signed flavor, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/SnenxyTengoku/<image>:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/SnenxyTengoku/<flavor>:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -63,8 +63,13 @@ If build on Fedora Atomic, you can generate an offline ISO with the instructions
 
 ## Verification
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+These flavors are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/SnenxyTengoku/<image>
+cosign verify --key cosign.pub ghcr.io/SnenxyTengoku/<flavor>
 ```
+
+## Credits
+
+- [BlueBuild](https://blue-build.org) and [Universal Blue](https://universal-blue.org/) for their tools, patches and various work, obviously.
+- [askpng](https://github.com/askpng) for [solarpowered](https://github.com/askpng/solarpowered), inspiring this repository's structure and for their kernel scripts.
