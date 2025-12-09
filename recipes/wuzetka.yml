@@ -22,7 +22,7 @@ modules:
     scripts:
       - ld.sh
       - qdbus.sh
-      #- bazzite-firmware.sh
+      - firmware-finalize.sh
       - sddm-astronaut-theme.sh
       - catppuccin-plasma-install.sh
       - papirus.sh
@@ -64,8 +64,6 @@ modules:
         - tailscaled.service
         - libvirtd.service
         - dnsmasq.service
-      disabled:
-        - wpa_supplicant
     user:
       enabled:
         - mpd.service

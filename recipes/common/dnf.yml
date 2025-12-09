@@ -128,3 +128,33 @@ install:
     - tesseract
     - unrar
     - util-linux
+remove:
+  packages:
+    # we use iwd with networkmanager, remove wpa_supplicant to prevent conflicts
+    - wpa_supplicant
+replace:
+  - from-repo: copr:copr.fedorainfracloud.org:bazzite-org:bazzite
+    skip-unavailable: true
+    packages:
+      # use bazzite's firmwares
+      # see https://github.com/ublue-os/bazzite/blob/main/build_files/install-firmware
+      - amd-gpu-firmware
+      - amd-ucode-firmware
+      - atheros-firmware
+      - brcmfmac-firmware
+      - cirrus-audio-firmware
+      - intel-audio-firmware
+      - intel-gpu-firmware
+      - intel-vsc-firmware
+      - iwlegacy-firmware
+      - iwlwifi-dvm-firmware
+      - iwlwifi-mvm-firmware
+      - libertas-firmware
+      - linux-firmware
+      - linux-firmware-whence
+      - mt7xxx-firmware
+      - nvidia-gpu-firmware
+      - nxpwireless-firmware
+      - qcom-wwan-firmware
+      - realtek-firmware
+      - tiwilink-firmware
