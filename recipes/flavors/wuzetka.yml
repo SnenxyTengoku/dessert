@@ -30,11 +30,6 @@ modules:
       - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/usr /usr
       - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/etc /etc
 
-  # post-run
-  - from-file: shared/fonts.yml # fonts
-  - from-file: shared/bling.yml # ublue bling selection
-  - from-file: shared/systemd.yml # default systemd services
-
   - type: script
     scripts:
       # customization
@@ -43,6 +38,11 @@ modules:
       - catppuccin/plasma.sh
       # ---
       - flavor/wuzetka.sh
+
+  # post-run
+  - from-file: shared/fonts.yml # fonts
+  - from-file: shared/bling.yml # ublue bling selection
+  - from-file: shared/systemd.yml # default systemd services
 
   - type: gschema-overrides
     include:
