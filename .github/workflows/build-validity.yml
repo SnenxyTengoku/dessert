@@ -27,8 +27,8 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - wuzetka-validity.yml
-          #- mazurek-validity.yml
+          - flavors/validity/wuzetka.yml
+          #- flavors/validity/mazurek.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
