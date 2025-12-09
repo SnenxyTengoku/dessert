@@ -20,8 +20,8 @@ dnf -y install --setopt=install_weak_deps=False \
 dnf -y copr enable bieszczaders/kernel-cachyos-lto
 dnf -y copr enable bieszczaders/kernel-cachyos-addons
 # dnf -y copr enable ublue-os/akmods
-dnf -y config-manager addrepo --from-repofile=https://negativo17.org/repos/fedora-multimedia.repo
-dnf -y config-manager addrepo --from-repofile=https://raw.githubusercontent.com/terrapkg/subatomic-repos/main/terra.repo
+# dnf -y config-manager addrepo --from-repofile=https://negativo17.org/repos/fedora-multimedia.repo
+# dnf -y config-manager addrepo --from-repofile=https://raw.githubusercontent.com/terrapkg/subatomic-repos/main/terra.repo
 
 # Handles kernel post-transaction scriptlet
 # mv /usr/lib/kernel/install.d/05-rpmostree.install /usr/lib/kernel/install.d/05-rpmostree.install.bak
