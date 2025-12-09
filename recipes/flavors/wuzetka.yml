@@ -18,41 +18,45 @@ modules:
   - from-file: common/wuzetka/dnf.yml
   - from-file: common/mpd.yml
 
-  - type: script
-    scripts:
-      - ld.sh
-      - qdbus.sh
-      - firmware-finalize.sh
-      - sddm-astronaut-theme.sh
-      - catppuccin-plasma-install.sh
-      - papirus.sh
-      - papirus-catppuccin.sh
-      - posy-cursors.sh
-      - vscodium.sh
-      - lazyvim.sh
-      - flac2opus.sh
-      - just.sh
-
-  - type: files
-    files:
-      - source: system/wuzetka
-        destination: /
-
+  # copy files and software from helper images
   - type: containerfile
     snippets:
-      # Replace default sddm background
-      - RUN rm -f /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/1.png
-      - RUN ln -sf /usr/share/backgrounds/catppuccin/black-hole-mocha.png /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/1.png
-      # ensure scripts are executable
-      - RUN chmod +x /usr/bin/unfuck-music
-      - RUN chmod +x /usr/bin/dns-toggle
-      # Copy self compiled software and allat
       - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/usr /usr
       - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/etc /etc
 
   - type: script
     scripts:
-      - system-wuzetka.sh
+      # are these even required anymore lol
+      - ld.sh
+      - qdbus.sh
+      - firmware-finalize.sh
+      # customization
+      - sddm-astronaut-theme.sh
+      - posy-cursors.sh
+      - papirus.sh
+      # catppuccin
+      - catppuccin/plasma.sh
+      - catppuccin/papirus.sh
+      # fixes
+      - vscodium.sh
+      - lazyvim.sh
+      # various additions
+      - flac2opus.sh
+      - just.sh
+      # ---
+      - flavor/wuzetka.sh
+
+  # shared base filesystem
+  - type: files
+    files:
+      - source: system/base
+        destination: /
+
+  # wuzetka files
+  - type: files
+    files:
+      - source: system/wuzetka
+        destination: /
 
   - from-file: common/flatpaks.yml
   - from-file: common/fonts.yml
