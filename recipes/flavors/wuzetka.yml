@@ -14,16 +14,25 @@ modules:
   - from-file: packages/flatpaks.yml # base default flatpaks
   - from-file: kernels/bazzite.yml # bazzite kernel
 
+  # pre-run
+  - from-file: shared/files.yml # shared base filesystem
+  - from-file: shared/scripts.yml # default scripts selection
+
+  # wuzetka files
+  - type: files
+    files:
+      - source: system/wuzetka
+        destination: /
+
   # copy files and software from helper images
   - type: containerfile
     snippets:
       - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/usr /usr
       - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/etc /etc
 
+  # post-run
   - from-file: shared/fonts.yml # fonts
   - from-file: shared/bling.yml # ublue bling selection
-  - from-file: shared/scripts.yml # default scripts selection
-  - from-file: shared/files.yml # shared base filesystem
   - from-file: shared/systemd.yml # default systemd services
 
   - type: script
@@ -34,12 +43,6 @@ modules:
       - catppuccin/plasma.sh
       # ---
       - flavor/wuzetka.sh
-
-  # wuzetka files
-  - type: files
-    files:
-      - source: system/wuzetka
-        destination: /
 
   - type: gschema-overrides
     include:
