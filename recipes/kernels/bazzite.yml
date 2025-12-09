@@ -51,7 +51,6 @@ modules:
     replace:
       - from-repo: copr:copr.fedorainfracloud.org:bazzite-org:bazzite
         skip-unavailable: true
-        cleanup: true
         packages:
           # use bazzite's firmwares
           # see https://github.com/ublue-os/bazzite/blob/main/build_files/install-firmware
