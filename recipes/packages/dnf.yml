@@ -1,141 +1,142 @@
-- type: dnf
-  repos:
-    nonfree: negativo17
-    copr:
-      - wezfurlong/wezterm-nightly
-      - wojnilowicz/ungoogled-chromium
-    files:
-      - https://download.opensuse.org/repositories/home:mkittler/Fedora_43/home:mkittler.repo # hardcoded version because they take a while to bump to latest fedora when it releases
-      - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-      - https://repository.mullvad.net/rpm/stable/mullvad.repo
-  install:
-    skip-unavailable: true
-    packages:
-      # web
-      - firefox
-      - mullvad-vpn
-      - speedtest-cli
-      - torbrowser-launcher
-      - ungoogled-chromium
+modules:
+  - type: dnf
+    repos:
+      nonfree: negativo17
+      copr:
+        - wezfurlong/wezterm-nightly
+        - wojnilowicz/ungoogled-chromium
+      files:
+        - https://download.opensuse.org/repositories/home:mkittler/Fedora_43/home:mkittler.repo # hardcoded version because they take a while to bump to latest fedora when it releases
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+        - https://repository.mullvad.net/rpm/stable/mullvad.repo
+    install:
+      skip-unavailable: true
+      packages:
+        # web
+        - firefox
+        - mullvad-vpn
+        - speedtest-cli
+        - torbrowser-launcher
+        - ungoogled-chromium
 
-      # "Office"
-      - libreoffice
-      - thunderbird
+        # "Office"
+        - libreoffice
+        - thunderbird
 
-      # misc
-      - blender
-      - docker-compose
-      - kernel-modules-extra
-      - mpv
-      - nextcloud-client
-      - pipx
-      - steam
-      - syncthing
-      - tailscale
-      - topgrade
-    
-      # beets
-      - beets
-      - beets-doc
-      - beets-plugins
-      - chromaprint-tools
-      - python3-acoustid
-      - python3-pylast
-      - python3-requests
+        # misc
+        - blender
+        - docker-compose
+        - kernel-modules-extra
+        - mpv
+        - nextcloud-client
+        - pipx
+        - steam
+        - syncthing
+        - tailscale
+        - topgrade
+      
+        # beets
+        - beets
+        - beets-doc
+        - beets-plugins
+        - chromaprint-tools
+        - python3-acoustid
+        - python3-pylast
+        - python3-requests
 
-      # flac2opus
-      - flac
-      - opus-tools
+        # flac2opus
+        - flac
+        - opus-tools
 
-      # environment
-      - crontabs
-      - gamescope
-      - helvum
-      - mangohud
-      - playerctl
-      - trash-cli
-      - wl-clipboard
+        # environment
+        - crontabs
+        - gamescope
+        - helvum
+        - mangohud
+        - playerctl
+        - trash-cli
+        - wl-clipboard
 
-      # python modules
-      - python3-colorama
-      - python3-dateutil
-      - python3-dbus
-      - python3-gobject
+        # python modules
+        - python3-colorama
+        - python3-dateutil
+        - python3-dbus
+        - python3-gobject
 
-      # themes
-      - bibata-cursor-theme
-      - pop-sound-theme
+        # themes
+        - bibata-cursor-theme
+        - pop-sound-theme
 
-      # virtualization
-      - edk2-ovmf
-      - genisoimage
-      - libvirt
-      - qemu
-      - qemu-char-spice
-      - qemu-device-display-virtio-gpu
-      - qemu-device-display-virtio-vga
-      - qemu-device-usb-redirect
-      - qemu-img
-      - qemu-system-x86-core
-      - qemu-user-binfmt
-      - virt-manager
+        # virtualization
+        - edk2-ovmf
+        - genisoimage
+        - libvirt
+        - qemu
+        - qemu-char-spice
+        - qemu-device-display-virtio-gpu
+        - qemu-device-display-virtio-vga
+        - qemu-device-usb-redirect
+        - qemu-img
+        - qemu-system-x86-core
+        - qemu-user-binfmt
+        - virt-manager
 
-      # android
-      - android-tools
-      - waydroid
+        # android
+        - android-tools
+        - waydroid
 
-      # music
-      - https://github.com/patryk-ku/music-discord-rpc/releases/latest/download/music-discord-rpc.rpm
-      - ncmpcpp
+        # music
+        - https://github.com/patryk-ku/music-discord-rpc/releases/latest/download/music-discord-rpc.rpm
+        - ncmpcpp
 
-      # cli
-      - bat
-      - btop
-      - duf
-      - eza
-      - fastfetch
-      - fd-find
-      - ffmpeg
-      - figlet
-      - fzf
-      - gdisk
-      - git-delta
-      - ImageMagick
-      - knock
-      - neovim
-      - pv
-      - ripgrep
-      - wezterm
-      - yt-dlp
-      - zoxide
-      - zsh
+        # cli
+        - bat
+        - btop
+        - duf
+        - eza
+        - fastfetch
+        - fd-find
+        - ffmpeg
+        - figlet
+        - fzf
+        - gdisk
+        - git-delta
+        - ImageMagick
+        - knock
+        - neovim
+        - pv
+        - ripgrep
+        - wezterm
+        - yt-dlp
+        - zoxide
+        - zsh
 
-      # other
-      - dmg2img
-      - fontconfig
-      - genisoimage
-      - gnome-themes-extra
-      - hunspell-en
-      - iwd
-      - libguestfs
-      - lzip
-      - net-tools
-      - p7zip
-      - screen
-      - tesseract
-      - unrar
-      - util-linux
-  remove:
-    packages:
-      # we use iwd with networkmanager, remove wpa_supplicant to prevent conflicts
-      - wpa_supplicant
+        # other
+        - dmg2img
+        - fontconfig
+        - genisoimage
+        - gnome-themes-extra
+        - hunspell-en
+        - iwd
+        - libguestfs
+        - lzip
+        - net-tools
+        - p7zip
+        - screen
+        - tesseract
+        - unrar
+        - util-linux
+    remove:
+      packages:
+        # we use iwd with networkmanager, remove wpa_supplicant to prevent conflicts
+        - wpa_supplicant
 
-- type: dnf
-  repos:
-    cleanup: true
-    nonfree: rpmfusion
-  install:
-    skip-unavailable: true
-    packages:
-      - mpd
+  - type: dnf
+    repos:
+      cleanup: true
+      nonfree: rpmfusion
+    install:
+      skip-unavailable: true
+      packages:
+        - mpd

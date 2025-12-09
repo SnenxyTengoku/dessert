@@ -1,0 +1,12 @@
+# recipe by askpng
+# https://github.com/askpng/solarpowered/blob/main/recipes/kernels/cachy.yml
+
+modules:
+  - type: script
+    scripts:
+    - kernels/cachy.sh
+
+  - type: systemd
+    system:
+      enabled:
+      - scx_loader.service

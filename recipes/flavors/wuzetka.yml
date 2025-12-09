@@ -9,9 +9,10 @@ image-version: 43 # latest is also supported if you want new updates ASAP
 
 modules:
   # packages
-  - from-file: packages/dnf.yml
-  - from-file: packages/wuzetka/dnf.yml
-  - from-file: packages/flatpaks.yml
+  - from-file: packages/dnf.yml # base package selection
+  - from-file: packages/wuzetka/dnf.yml # wuzetka package selection
+  - from-file: packages/flatpaks.yml # base default flatpaks
+  - from-file: kernels/cachy.yml # cachy kernel
 
   # copy files and software from helper images
   - type: containerfile
