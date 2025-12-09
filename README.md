@@ -4,7 +4,7 @@ Custom [Atomic](https://docs.fedoraproject.org/en-US/emerging) [Fedora](https://
 
 Named Dessert, because they are sweet. `:]]`
 
-These flavors <small>(otherwise *"images"*, but like, y'know, dessert)*</small> are heavily opinionated and customized, mainly only meant for personal use, but are available for other's use if preferred.
+These flavors <small>(otherwise *"images"*, but like, y'know, dessert)</small> are heavily opinionated and customized, mainly only meant for personal use, but are available for other's use if preferred.
 
 I don't provide support or anything - these are for myself, anyways.
 
