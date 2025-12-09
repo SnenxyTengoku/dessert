@@ -1,4 +1,4 @@
-ARG IMAGE_MAJOR_VERSION=42
+ARG IMAGE_MAJOR_VERSION=43
 
 # KDE/Kwin Extras/Addons
 FROM fedora:${IMAGE_MAJOR_VERSION} as kde-extras
