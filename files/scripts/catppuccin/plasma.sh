@@ -3,9 +3,6 @@
 
 set -euox pipefail
 
-#
-# KDE Theme
-#
 cd /tmp
 git clone https://github.com/catppuccin/kde.git catppuccinkde
 cd catppuccinkde
