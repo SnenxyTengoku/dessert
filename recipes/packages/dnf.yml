@@ -45,9 +45,11 @@ modules:
         - python3-pylast
         - python3-requests
 
-        # flac2opus
+        # flacconv
         - flac
+        - lame
         - opus-tools
+        - opustags
 
         # environment
         - crontabs

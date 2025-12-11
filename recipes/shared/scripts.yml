@@ -14,5 +14,5 @@ scripts:
   - additions/vscodium.sh
   - additions/lazyvim.sh
   # various additions
-  - additions/flac2opus.sh
+  - additions/flacconv.sh
   - additions/just.sh
