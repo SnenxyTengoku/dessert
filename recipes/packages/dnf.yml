@@ -115,6 +115,7 @@ modules:
         - zsh
 
         # other
+        - butane
         - dmg2img
         - fontconfig
         - genisoimage
