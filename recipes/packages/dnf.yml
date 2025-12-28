@@ -126,6 +126,7 @@ modules:
         - lzip
         - net-tools
         - p7zip
+        - podlet
         - screen
         - tesseract
         - unrar
