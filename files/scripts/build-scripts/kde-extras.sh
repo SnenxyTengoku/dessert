@@ -111,6 +111,17 @@ cmake --build build
 DESTDIR="/artifacts/kde-extras-built" cmake --install build
 
 #
+# KDE Control Station
+#
+mkdir -p /artifacts/kde-extras-built/usr/share/plasma/plasmoids/KdeControlStation
+cd /tmp
+git clone --single-branch --depth=1 https://github.com/EliverLara/kde-control-station.git
+cd kde-control-station
+mv package/contents /artifacts/kde-extras-built/usr/share/plasma/plasmoids/KdeControlStation
+mv package/translate /artifacts/kde-extras-built/usr/share/plasma/plasmoids/KdeControlStation
+mv package/metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/KdeControlStation
+
+#
 # Window Title Applet
 #
 mkdir -p /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.kde.windowtitle
@@ -129,6 +140,18 @@ cd /tmp
 git clone --single-branch --depth=1 https://github.com/ccatterina/plasmusic-toolbar.git
 cd plasmusic-toolbar
 mv ./src/* /artifacts/kde-extras-built/usr/share/plasma/plasmoids/plasmusic-toolbar
+
+#
+# Overview
+#
+mkdir -p /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.kde.plasma.overview
+cd /tmp
+git clone --single-branch --depth=1 https://github.com/HimDek/Overview-Widget-for-Plasma.git
+cd Overview-Widget-for-Plasma
+mv contents /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.kde.plasma.overview
+mv metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.kde.plasma.overview
+mv index.html /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.kde.plasma.overview
+mv LICENSE.md /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.kde.plasma.overview
 
 #
 # kara
