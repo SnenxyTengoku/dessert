@@ -25,7 +25,6 @@ modules:
         - thunderbird
 
         # misc
-        - blender
         - docker-compose
         - kernel-modules-extra
         - mpv

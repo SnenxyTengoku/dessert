@@ -30,6 +30,7 @@ configurations:
       - io.gitlab.adhami3310.Footage
       - io.lmms.LMMS
       - net.blockbench.Blockbench
+      - org.blender.Blender
       - org.gimp.GIMP
       - org.inkscape.Inkscape
       - org.kde.kdenlive
