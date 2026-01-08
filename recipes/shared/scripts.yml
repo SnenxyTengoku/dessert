@@ -10,6 +10,7 @@ scripts:
   - additions/papirus.sh
   # catppuccin
   - catppuccin/papirus.sh
+  - catppuccin/colloid.sh
   # extra software
   - additions/vscodium.sh
   - additions/lazyvim.sh
