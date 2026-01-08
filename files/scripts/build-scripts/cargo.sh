@@ -23,9 +23,6 @@ cargo install sd --root /artifacts/cargo-built/usr
 # Krabby - https://github.com/yannjor/krabby
 cargo install krabby --root /artifacts/cargo-built/usr
 
-# inori - https://github.com/eshrh/inori
-cargo install inori --root /artifacts/cargo-built/usr
-
 # Rusty Music Player Client - https://github.com/mierak/rmpc
 cargo install rmpc --locked --root /artifacts/cargo-built/usr
 
