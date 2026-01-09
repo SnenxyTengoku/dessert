@@ -42,7 +42,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][139][Applets][65][Configuration][General]
-launchers=preferred://filemanager,preferred://browser,applications:org.wezfurlong.wezterm.desktop
+launchers=preferred://filemanager,preferred://browser,applications:org.kde.konsole.desktop
 showOnlyCurrentDesktop=false
 
 [Containments][139][General]

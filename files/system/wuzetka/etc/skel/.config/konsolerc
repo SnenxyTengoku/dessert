@@ -1,0 +1,13 @@
+MenuBar=Disabled
+
+[Desktop Entry]
+DefaultProfile=Wuzetka.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+MenuBar=Disabled
+
+[UiSettings]
+ColorScheme=

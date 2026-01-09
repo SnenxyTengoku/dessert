@@ -3,7 +3,6 @@ modules:
     repos:
       nonfree: negativo17
       copr:
-        #- wezfurlong/wezterm-nightly
         - wojnilowicz/ungoogled-chromium
       files:
         - https://download.opensuse.org/repositories/home:mkittler/Fedora_43/home:mkittler.repo # hardcoded version because they take a while to bump to latest fedora when it releases
@@ -108,7 +107,6 @@ modules:
         - neovim
         - pv
         - ripgrep
-        - https://github.com/wezterm/wezterm/releases/download/nightly/wezterm-nightly-fedora41.rpm
         - yt-dlp
         - zoxide
         - zsh
