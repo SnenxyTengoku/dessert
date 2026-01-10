@@ -119,6 +119,7 @@ modules:
         - gnome-themes-extra
         - hunspell-en
         - iwd
+        - javafx
         - libguestfs
         - lzip
         - net-tools
