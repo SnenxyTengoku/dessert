@@ -12,8 +12,9 @@ scripts:
   - catppuccin/papirus.sh
   - catppuccin/colloid.sh
   # extra software
-  - additions/vscodium.sh
+  - additions/b2.sh
   - additions/lazyvim.sh
+  - additions/vscodium.sh
   # various additions
   - additions/flacconv.sh
   - additions/just.sh
