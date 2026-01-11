@@ -68,6 +68,7 @@ configurations:
       - io.github.ryubing.Ryujinx
       - io.github.stella_emu.Stella
       - io.mgba.mGBA
+      - net._86box._86Box
       - net.kuribo64.melonDS
       - net.minetest.Minetest
       - net.pcsx2.PCSX2
