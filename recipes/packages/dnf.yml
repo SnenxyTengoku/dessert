@@ -3,6 +3,7 @@ modules:
     repos:
       nonfree: negativo17
       copr:
+        - imput/helium
         - wojnilowicz/ungoogled-chromium
       files:
         - https://download.opensuse.org/repositories/home:mkittler/Fedora_43/home:mkittler.repo # hardcoded version because they take a while to bump to latest fedora when it releases
@@ -14,6 +15,7 @@ modules:
       packages:
         # web
         - firefox
+        - helium-bin
         - mullvad-vpn
         - speedtest-cli
         - torbrowser-launcher
