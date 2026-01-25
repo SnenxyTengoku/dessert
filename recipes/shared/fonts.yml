@@ -24,3 +24,10 @@ fonts:
         - Source Sans 3
         - Source Serif 4
         - WDXL Lubrifont SC
+    url-fonts:
+        - name: OTADESIGNRounded
+          url: https://db.onlinewebfonts.com/t/70da9f41f4744502732c5056808aa7bd.ttf
+        - name: FOT-YurukaStd
+          url: https://db.onlinewebfonts.com/t/2b3966678f6a1c8c8be202caeb49d95a.ttf
+        - name: NoseyRodent
+          url: https://micenest.xyz/nro/noseyrodent.zip
