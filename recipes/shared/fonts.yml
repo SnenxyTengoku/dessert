@@ -3,23 +3,24 @@ type: fonts
 fonts:
     nerd-fonts:
         - FiraCode
-        - Hack
-        - SourceCodePro
-        - Terminus
+        - Iosevka
         - JetBrainsMono
         - NerdFontsSymbolsOnly
+        - SourceCodePro
+        - Terminus
     google-fonts:
         - Atkinson Hyperlegible
         - Atkinson Hyperlegible Next
-        - Lexend Deca
-        - Lexend
-        - Inter
-        - Noto Sans
-        - Roboto
-        - Noto Color Emoji
-        - Open Sans
-        - Source Serif 4
-        - Source Sans 3
+        - EB Garamond
         - IBM Plex Sans
         - IBM Plex Serif
-        - EB Garamond
+        - Inter
+        - Lexend
+        - Lexend Deca
+        - Noto Color Emoji
+        - Noto Sans
+        - Open Sans
+        - Roboto
+        - Source Sans 3
+        - Source Serif 4
+        - WDXL Lubrifont SC
