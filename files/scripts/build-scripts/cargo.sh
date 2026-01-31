@@ -8,11 +8,11 @@ dnf install -y git gcc gcc-c++ cmake openssl protobuf protobuf-devel protobuf-co
 mkdir -p /artifacts/cargo-built/usr/bin
 
 # Atuin - https://github.com/atuinsh/atuin
-#cargo install atuin --root /artifacts/cargo-built/usr
-cd /tmp
-git clone https://github.com/atuinsh/atuin.git
-cd atuin/crates/atuin
-cargo install --path . --root /artifacts/cargo-built/usr
+cargo install atuin --root /artifacts/cargo-built/usr
+#cd /tmp
+#git clone https://github.com/atuinsh/atuin.git
+#cd atuin/crates/atuin
+#cargo install --path . --root /artifacts/cargo-built/usr
 
 # Starship - https://starship.rs/
 cargo install starship --locked --root /artifacts/cargo-built/usr
