@@ -1,4 +1,4 @@
-# Dessert &nbsp; [![image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build.yml) [![python-validity image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-validity.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-validity.yml) [![containers build badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/containers.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/containers.yml) [![distrobox image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-distrobox.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-distrobox.yml)
+# Dessert &nbsp; [![image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build.yml) [![python-validity image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-validity.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-validity.yml) [![containers build badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/containers.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/containers.yml)
 
 Custom [Atomic](https://docs.fedoraproject.org/en-US/emerging) [Fedora](https://fedoraproject.org) images built using [BlueBuild](https://blue-build.org), based on the extra works of [Universal Blue](https://universal-blue.org).
 
@@ -20,10 +20,6 @@ Features many extensions on the Plasma desktop and custom utilities and tools fo
 ### Wuzetka Validity <sub>`wuzetka-validity`</sub>
 
 The same flavor as Wuzetka, but it replaces `fprintd` packages with [python-validity](https://github.com/uunicorn/python-validity) to allow support for using "unsupported" fingerprint sensors on certain devices, such as the Thinkpad T480.
-
-### `arch-wuzetka`
-
-Custom Arch Linux flavor made for use <i>strictly</i> with Distrobox. Just includes most of the same CLI utilities from Wuzetka to provide a more seamless, integrated experience.
 
 ## Mazurek <sub>`mazurek`</sub>
 
