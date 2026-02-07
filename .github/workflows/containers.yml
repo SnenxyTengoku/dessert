@@ -28,7 +28,10 @@ jobs:
             fail-fast: false
             matrix:
                 containerfile:
-                    - containerfiles/helpers/wuzetka-helper.Containerfile
+                    - containerfiles/helpers/cargo.Containerfile
+                    - containerfiles/helpers/catppuccin.Containerfile
+                    - containerfiles/helpers/go.Containerfile
+                    - containerfiles/helpers/kde.Containerfile
 
         steps:
             # Checkout push-to-registry action GitHub repository
