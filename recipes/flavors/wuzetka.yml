@@ -28,8 +28,15 @@ modules:
   # copy files and software from helper images
   - type: containerfile
     snippets:
-      - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/usr /usr
-      - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/etc /etc
+      # -- catppuccin
+      - COPY --from=ghcr.io/snenxytengoku/helper-catppuccin /artifacts/usr /usr
+      - COPY --from=ghcr.io/snenxytengoku/helper-catppuccin /artifacts/etc /etc
+      # -- cargo
+      - COPY --from=ghcr.io/snenxytengoku/helper-cargo /artifacts/usr /usr
+      # -- go
+      - COPY --from=ghcr.io/snenxytengoku/helper-go /artifacts/usr /usr
+      # -- kde
+      - COPY --from=ghcr.io/snenxytengoku/helper-kde /artifacts/usr /usr
 
   - type: script
     scripts:
