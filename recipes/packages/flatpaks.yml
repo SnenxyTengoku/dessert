@@ -17,7 +17,6 @@ configurations:
       - org.signal.Signal
 
       # office
-      - io.github.Qalculate.qalculate-qt
       - md.obsidian.Obsidian
 
       # media production, editing software
@@ -35,9 +34,7 @@ configurations:
       - org.inkscape.Inkscape
       - org.kde.kdenlive
       - org.kde.krita
-      - org.mattbas.Glaxnimate
       - org.tenacityaudio.Tenacity
-      - org.tuxpaint.Tuxpaint
 
       # (desktop) utilities
       - com.bitwarden.desktop
@@ -53,7 +50,6 @@ configurations:
       - io.gitlab.azymohliad.WatchMate
       - it.mijorus.gearlever
       - net.davidotek.pupgui2
-      - org.kde.okteta
       - page.codeberg.JakobDev.jdAnimatedImageEditor
       - page.codeberg.JakobDev.jdPixelUpscaler
 

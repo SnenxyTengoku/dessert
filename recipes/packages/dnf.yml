@@ -20,7 +20,6 @@ modules:
         - mullvad-vpn
         - speedtest-cli
         - torbrowser-launcher
-        - ungoogled-chromium
 
         # "Office"
         - libreoffice
@@ -123,12 +122,12 @@ modules:
         - gnome-themes-extra
         - hunspell-en
         - iwd
-        - javafx
         - libguestfs
         - lzip
         - net-tools
         - p7zip
         - podlet
+        - rsms-inter-fonts
         - screen
         - tesseract
         - unrar

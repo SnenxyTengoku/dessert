@@ -1,0 +1,14 @@
+type: default-flatpaks
+configurations:
+  - notify: false
+    scope: system
+    repo:
+      url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      name: flathub
+      title: "Flathub (system-wide)"
+    install:
+      # office
+      - io.github.Qalculate.qalculate-qt
+
+      # (desktop) utilities
+      - org.kde.okteta
