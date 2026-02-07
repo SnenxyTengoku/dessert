@@ -39,7 +39,9 @@ jobs:
               uses: actions/checkout@v6
 
             - name: Gather environment variables
-              run: echo "IMAGE_NAME=$(echo ${{ matrix.containerfile }} | cut -d . -f 1 | cut -d '/' -f 3)" >> $GITHUB_ENV
+              run: | # this is messy but whatever
+                IMAGE_NAME_TRIMMED=$(echo ${{ matrix.containerfile }} | cut -d . -f 1 | cut -d '/' -f 3)
+                echo "IMAGE_NAME=$(echo helper-${IMAGE_NAME_TRIMMED})" >> $GITHUB_ENV
 
             # Build metadata
             - name: Image Metadata
