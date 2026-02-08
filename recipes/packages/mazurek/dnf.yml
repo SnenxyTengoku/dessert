@@ -19,6 +19,7 @@ install:
     - dolphin-plugins
     - kwallet # seamless migration between wuzetka <-> mazurek
     - pam-kwallet 
+    - xdg-desktop-portal-gnome # required by niri for basic functionality
 
     # extra
     - cliphist
