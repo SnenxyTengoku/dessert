@@ -51,6 +51,12 @@ modules:
   - from-file: shared/bling.yml # ublue bling selection
   - from-file: shared/systemd.yml # default systemd services
 
+  # enable noctalia shell
+  - type: systemd
+    user:
+      enabled:
+        - noctalia.service
+
   #- type: gschema-overrides
   #  include:
   #    - zz1-wuzetka.gschema.override
