@@ -28,7 +28,15 @@ modules:
         - wlsunset
     remove:
       packages:
-        # included by wayblue - we don't need them, so we remove them
+        # additional software included by wayblue - we don't need them, so we remove them
+        - dunst
+        - imv
         - rofi-wayland
+        - swaybg
+        - swayidle
+        - swaylock
+        - thunar
+        - thunar-archive-plugin 
+        - thunar-volman
         - wofi
-        - xfce-polkit
+        - xarchiver
