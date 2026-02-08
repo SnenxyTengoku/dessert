@@ -8,9 +8,6 @@ modules:
         # shell
         - noctalia-shell
 
-        # xwayland
-        - xwayland-satellite
-
         # themes
         - adw-gtk3-theme
 
@@ -18,9 +15,6 @@ modules:
         - ark
         - dolphin
         - dolphin-plugins
-        - kwallet # seamless migration between wuzetka <-> mazurek
-        - pam-kwallet 
-        - xdg-desktop-portal-gnome # required by niri for basic functionality
 
         # extra
         - cliphist
