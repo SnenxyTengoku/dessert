@@ -1,27 +1,34 @@
-type: dnf
-repos:
-  nonfree: negativo17
-install:
-  skip-unavailable: true
-  packages:
-    # shell
-    - noctalia-shell
+modules:
+  - type: dnf
+    repos:
+      nonfree: negativo17
+    install:
+      skip-unavailable: true
+      packages:
+        # shell
+        - noctalia-shell
 
-    # xwayland
-    - xwayland-satellite
+        # xwayland
+        - xwayland-satellite
 
-    # themes
-    - adw-gtk3-theme
+        # themes
+        - adw-gtk3-theme
 
-    # utilities/compat
-    - ark
-    - dolphin
-    - dolphin-plugins
-    - kwallet # seamless migration between wuzetka <-> mazurek
-    - pam-kwallet 
-    - xdg-desktop-portal-gnome # required by niri for basic functionality
+        # utilities/compat
+        - ark
+        - dolphin
+        - dolphin-plugins
+        - kwallet # seamless migration between wuzetka <-> mazurek
+        - pam-kwallet 
+        - xdg-desktop-portal-gnome # required by niri for basic functionality
 
-    # extra
-    - cliphist
-    - matugen
-    - wlsunset
+        # extra
+        - cliphist
+        - matugen
+        - wlsunset
+    remove:
+      packages:
+        # included by wayblue - we don't need them, so we remove them
+        - rofi-wayland
+        - wofi
+        - xfce-polkit

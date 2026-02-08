@@ -26,10 +26,10 @@ modules:
   - from-file: shared/scripts.yml # default scripts selection
 
   # mazurek files
-  - type: files
-    files:
-      - source: system/mazurek
-        destination: /
+  #- type: files
+  #  files:
+  #    - source: system/mazurek
+  #      destination: /
 
   # copy files and software from helper images
   - type: containerfile
