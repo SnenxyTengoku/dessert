@@ -31,6 +31,7 @@ modules:
         # additional software included by wayblue - we don't need them, so we remove them
         - dunst
         - imv
+        - papirus-icon-theme # we install it directly from upstream
         - rofi-wayland
         - swaybg
         - swayidle
