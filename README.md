@@ -23,9 +23,7 @@ The same flavor as Wuzetka, but it replaces `fprintd` packages with [python-vali
 
 ## Mazurek <sub>`mazurek`</sub>
 
-<b>[WIP: Non existent currently.]</b>
-
-Another customized flavor in the same flavor of Wuzetka, but based on Fedora Silverblue and focusing on customizing and extending the GNOME desktop environment.
+A custom Fedora Atomic desktop with Niri and Noctalia Shell, to provide a unique experience. Includes utilities to allow for an easy migration between Wuzetka and Mazurek and back.
 
 ## Installation
 
