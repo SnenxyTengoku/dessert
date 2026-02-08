@@ -10,9 +10,9 @@ image-version: 43 # latest is also supported if you want new updates ASAP
 modules:
   - type: containerfile
     snippets:
-      # wayblue nukes "unused" repositories in their images; this breaks trying to install packages from rpmfusion.
+      # wayblue nukes "unused" repositories in their images; this breaks trying to install packages from rpmfusion. 🫩
       # (NOTE: really, all we need is fedora-cisco-openh264, but that would also mean needing to keep it manually up to date and etc. so we just pull it all back in)
-      - COPY --from=quay.io/fedora-ostree-desktops/base-atomic /etc/yum.repos.d /etc/yum.repos.d
+      - COPY --from=quay.io/fedora-ostree-desktops/base-atomic:43 /etc/yum.repos.d /etc/yum.repos.d
 
   # packages
   - from-file: packages/dnf.yml # base package selection
