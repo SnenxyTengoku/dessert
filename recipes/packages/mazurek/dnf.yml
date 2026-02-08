@@ -24,5 +24,4 @@ install:
     # extra
     - cliphist
     - matugen
-    - power-profiles-daemon
     - wlsunset
