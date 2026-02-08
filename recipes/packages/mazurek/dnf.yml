@@ -1,0 +1,27 @@
+type: dnf
+repos:
+  nonfree: negativo17
+install:
+  skip-unavailable: true
+  packages:
+    # shell
+    - noctalia-shell
+
+    # xwayland
+    - xwayland-satellite
+
+    # themes
+    - adw-gtk3-theme
+
+    # utilities/compat
+    - ark
+    - dolphin
+    - dolphin-plugins
+    - kwallet # seamless migration between wuzetka <-> mazurek
+    - pam-kwallet 
+
+    # extra
+    - cliphist
+    - matugen
+    - power-profiles-daemon
+    - wlsunset

@@ -41,8 +41,6 @@ configurations:
       - com.github.Matoking.protontricks
       - com.github.qarmin.szyszka
       - com.github.tenderowl.frog
-      - com.jeffser.Alpaca
-      - com.jeffser.Alpaca.Plugins.Ollama
       - com.rustdesk.RustDesk
       - com.usebottles.bottles
       - fr.handbrake.ghb

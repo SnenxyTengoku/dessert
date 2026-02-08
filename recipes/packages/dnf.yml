@@ -82,6 +82,7 @@ modules:
         - qemu-img
         - qemu-system-x86-core
         - qemu-user-binfmt
+        - qemu-user-static
         - virt-manager
 
         # android
@@ -98,6 +99,7 @@ modules:
         - duf
         - eza
         - fastfetch
+        - cava
         - fd-find
         - ffmpeg
         - figlet
@@ -122,6 +124,7 @@ modules:
         - gnome-themes-extra
         - hunspell-en
         - iwd
+        - ddcutil
         - libguestfs
         - lzip
         - net-tools

@@ -1,0 +1,19 @@
+type: default-flatpaks
+configurations:
+  - notify: false
+    scope: system
+    repo:
+      url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      name: flathub
+      title: "Flathub (system-wide)"
+    install:
+      # (desktop) utilities
+      - app.drey.Dialect
+      - io.github.giantpinkrobots.flatsweep
+      - org.gnome.baobab
+      - org.gnome.Calculator
+      - org.gnome.Loupe
+      - org.gnome.Papers
+      - org.gnome.SimpleScan
+      - org.gnome.Snapshot
+      - org.kde.okteta
