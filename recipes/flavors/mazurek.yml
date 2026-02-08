@@ -4,7 +4,7 @@ name: mazurek
 description: sneexy's personal and opinionated fedora niri image
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/wayblueorg/niri
+base-image: ghcr.io/snenxytengoku/base-images/niri
 image-version: 43 # latest is also supported if you want new updates ASAP
 
 modules:
