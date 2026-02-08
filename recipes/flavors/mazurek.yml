@@ -44,7 +44,7 @@ modules:
       # customization
       - additions/sddm-astronaut-theme.sh
       # ---
-      #- flavors/mazurek.sh
+      - flavors/mazurek.sh
 
   # post-run
   - from-file: shared/fonts.yml # fonts
