@@ -8,13 +8,15 @@ modules:
         # shell
         - noctalia-shell
 
-        # themes
-        - adw-gtk3-theme
-
-        # utilities/compat
+        # utilities
         - ark
+        - baobab
         - dolphin
         - dolphin-plugins
+        - kate
+
+        # themes
+        - adw-gtk3-theme
 
         # extra
         - cliphist

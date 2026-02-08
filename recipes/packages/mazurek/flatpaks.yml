@@ -10,7 +10,6 @@ configurations:
       # (desktop) utilities
       - app.drey.Dialect
       - io.github.giantpinkrobots.flatsweep
-      - org.gnome.baobab
       - org.gnome.Calculator
       - org.gnome.Loupe
       - org.gnome.Papers
