@@ -19,24 +19,26 @@ modules:
   - from-file: shared/files.yml # shared base filesystem
   - from-file: shared/scripts.yml # default scripts selection
 
-  # wuzetka files
+  # mazurek files
   - type: files
     files:
-      - source: system/wuzetka
+      - source: system/mazurek
         destination: /
 
   # copy files and software from helper images
-  #- type: containerfile
-  #  snippets:
-  #    - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/usr /usr
-  #    - COPY --from=ghcr.io/snenxytengoku/wuzetka-helper /artifacts/etc /etc
+  - type: containerfile
+    snippets:
+      # -- cargo
+      - COPY --from=ghcr.io/snenxytengoku/helper-cargo /artifacts/usr /usr
+      # -- go
+      - COPY --from=ghcr.io/snenxytengoku/helper-go /artifacts/usr /usr
 
   - type: script
     scripts:
       # customization
       - additions/sddm-astronaut-theme.sh
       # ---
-      - flavors/mazurek.sh
+      #- flavors/mazurek.sh
 
   # post-run
   - from-file: shared/fonts.yml # fonts
