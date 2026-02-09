@@ -14,4 +14,4 @@ FROM fedora:${IMAGE_MAJOR_VERSION}
 RUN mkdir -p /artifacts/usr
 RUN mkdir -p /artifacts/etc
 
-COPY --from=wwm /artifacts/wmutils-built/usr /artifacts/usr
+COPY --from=wmutils /artifacts/wmutils-built/usr /artifacts/usr
