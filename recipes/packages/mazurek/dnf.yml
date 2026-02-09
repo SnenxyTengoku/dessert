@@ -17,6 +17,7 @@ modules:
 
         # themes
         - adw-gtk3-theme
+        - nwg-look
         - qt6ct
 
         # extra

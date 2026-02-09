@@ -32,6 +32,7 @@ jobs:
                     - containerfiles/helpers/catppuccin.Containerfile
                     - containerfiles/helpers/go.Containerfile
                     - containerfiles/helpers/kde.Containerfile
+                    - containerfiles/helpers/wmutils.Containerfile
 
         steps:
             # Checkout push-to-registry action GitHub repository
