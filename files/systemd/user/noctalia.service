@@ -1,8 +1,8 @@
 [Unit]
 Description=Noctalia Shell Service
-PartOf=graphical-session.target
+PartOf=graphical-session.target niri.service
 Requisite=graphical-session.target
-After=graphical-session.target niri.service
+After=graphical-session.target
 
 [Service]
 ExecStart=qs -c noctalia-shell

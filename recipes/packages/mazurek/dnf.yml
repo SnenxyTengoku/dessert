@@ -17,8 +17,8 @@ modules:
 
         # themes
         - adw-gtk3-theme
+        - qt6ct
 
         # extra
         - cliphist
         - matugen
-        - wlsunset
