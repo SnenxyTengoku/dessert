@@ -18,6 +18,7 @@ modules:
         # themes
         - adw-gtk3-theme
         - nwg-look
+        - plasma-breeze
         - qt6ct
 
         # extra
