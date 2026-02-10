@@ -16,3 +16,7 @@ configurations:
       - org.gnome.SimpleScan
       - org.gnome.Snapshot
       - org.kde.okteta
+
+      # themes
+      - org.gtk.Gtk3theme.adw-gtk3
+      - org.gtk.Gtk3theme.adw-gtk3-dark
