@@ -2,5 +2,3 @@
 // │ startup │
 // ╰─────────╯
 // 📖 https://niri-wm.github.io/niri/Configuration:-Miscellaneous
-
-spawn-at-startup "/usr/bin/kanshi"

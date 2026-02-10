@@ -53,6 +53,7 @@ modules:
       enabled:
         - noctalia.service
         - stasis.service
+        - kanshi.service
 
   #- type: gschema-overrides
   #  include:
