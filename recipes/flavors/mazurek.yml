@@ -19,11 +19,16 @@ modules:
   - from-file: shared/files.yml # shared base filesystem
   - from-file: shared/scripts.yml # default scripts selection
 
+  # create an original copy of the niri configuration
+  - type: script
+    snippets:
+      - "mv /etc/niri/config.kdl /etc/niri/og-config.kdl"
+
   # mazurek files
-  #- type: files
-  #  files:
-  #    - source: system/mazurek
-  #      destination: /
+  - type: files
+    files:
+      - source: system/mazurek
+        destination: /
 
   # copy files and software from helper images
   - type: containerfile
@@ -52,6 +57,7 @@ modules:
     user:
       enabled:
         - noctalia.service
+        - stasis.service
 
   #- type: gschema-overrides
   #  include:

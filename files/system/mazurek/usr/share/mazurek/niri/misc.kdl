@@ -1,0 +1,18 @@
+// ╭───────────────╮
+// │ misc. options │
+// ╰───────────────╯
+
+// basically disables titlebars and stops applications from looking like full "gnome" windows
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+// noctalia configurations
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}

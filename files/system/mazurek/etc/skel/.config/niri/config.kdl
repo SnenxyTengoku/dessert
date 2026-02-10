@@ -1,0 +1,21 @@
+// ╭───────────────────────────────────────────╮
+// │        _      _                           │
+// │  _ __ (_)_ __(_)                          │
+// │ | '_ \| | '__| |                          │
+// │ | | | | | |  | |                          │
+// │ |_| |_|_|_|  |_|                          │
+// │                                     _     │
+// │  _ __ ___   __ _ _____   _ _ __ ___| | __ │
+// │ | '_ ` _ \ / _` |_  / | | | '__/ _ \ |/ / │
+// │ | | | | | | (_| |/ /| |_| | | |  __/   <  │
+// │ |_| |_| |_|\__,_/___|\__,_|_|  \___|_|\_\ │
+// ╰───────────────────────────────────────────╯
+// mazurek's default niri config.
+// by yours truly, ~sneexy
+//
+// the default configuration containing core parts of the shell is imported from the mazurek directory and changes with updates.
+// any changes you wish to make should be done in ~/.config/niri/local.kdl or /etc/niri/local.kdl
+
+include "/etc/niri/config.kdl"
+
+include optional=true "local.kdl"

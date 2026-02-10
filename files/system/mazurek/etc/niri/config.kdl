@@ -1,0 +1,30 @@
+// ╭───────────────────────────────────────────╮
+// │        _      _                           │
+// │  _ __ (_)_ __(_)                          │
+// │ | '_ \| | '__| |                          │
+// │ | | | | | |  | |                          │
+// │ |_| |_|_|_|  |_|                          │
+// │                                     _     │
+// │  _ __ ___   __ _ _____   _ _ __ ___| | __ │
+// │ | '_ ` _ \ / _` |_  / | | | '__/ _ \ |/ / │
+// │ | | | | | | (_| |/ /| |_| | | |  __/   <  │
+// │ |_| |_| |_|\__,_/___|\__,_|_|  \___|_|\_\ │
+// ╰───────────────────────────────────────────╯
+// mazurek's default niri config.
+// by yours truly, ~sneexy
+//
+//              ~ helpful links ~
+// niri                     https://niri-wm.github.io/
+// noctalia shell           https://docs.noctalia.dev/
+// default niri config      https://github.com/niri-wm/niri/blob/main/resources/default-config.kdl
+
+// configurations
+include "/usr/share/mazurek/niri/environment.kdl" // environment variables
+include "/usr/share/mazurek/niri/startup.kdl" // startup
+include "/usr/share/mazurek/niri/inputs.kdl" // inputs
+
+include "/usr/share/mazurek/niri/layout.kdl" // window management layout
+include "/usr/share/mazurek/niri/eyecandy.kdl" // theming
+
+include "/usr/share/mazurek/niri/fixes.kdl" // random fixes
+include "/usr/share/mazurek/niri/misc.kdl" // misc settings

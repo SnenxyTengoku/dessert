@@ -1,0 +1,10 @@
+// ╭──────────╮
+// │ eyecandy │
+// ╰──────────╯
+// 📖 https://niri-wm.github.io/niri/Configuration:-Miscellaneous (general)
+// 📖 https://niri-wm.github.io/niri/Configuration:-Animations
+
+animations {
+    // off
+    // slowdown 3.0
+}

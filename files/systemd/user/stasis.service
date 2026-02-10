@@ -1,0 +1,14 @@
+[Unit]
+Description=Stasis Wayland Idle Manager
+PartOf=graphical-session.target
+Wants=niri.service
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/stasis
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
