@@ -17,5 +17,6 @@
 // any changes you wish to make should be done in ~/.config/niri/local.kdl or /etc/niri/local.kdl
 
 include "/etc/niri/config.kdl"
+include "./noctalia.kdl"
 
 //include optional=true "local.kdl"
