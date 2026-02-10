@@ -101,3 +101,6 @@ layer-rule {
 // │ workspaces │
 // ╰────────────╯
 // 📖 https://niri-wm.github.io/niri/Configuration:-Named-Workspaces
+
+workspace "chat"
+workspace "browser"

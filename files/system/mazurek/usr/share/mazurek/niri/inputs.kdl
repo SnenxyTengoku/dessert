@@ -28,6 +28,10 @@ cursor {
     xcursor-size 24
 }
 
+hot-corners {
+    off
+}
+
 // ╭──────────╮
 // │ keybinds │
 // ╰──────────╯
