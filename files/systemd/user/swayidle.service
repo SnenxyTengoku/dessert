@@ -1,0 +1,15 @@
+[Unit]
+Description=Swayidle Idle Manager
+PartOf=graphical-session.target
+Wants=niri.service
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+# wait for 8 minutes of no activity before locking screen
+# 15 seconds after locking to turn off displays
+ExecStart=/usr/bin/swayidle -w timeout 480 'qs -c noctalia-shell ipc call lockScreen lock' timeout 495 'niri msg action power-off-monitors' before-sleep 'qs -c noctalia-shell ipc call lockScreen lock'
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

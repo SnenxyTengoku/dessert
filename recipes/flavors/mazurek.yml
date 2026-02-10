@@ -51,9 +51,9 @@ modules:
   - type: systemd
     user:
       enabled:
-        - noctalia.service
-        - stasis.service
         - kanshi.service
+        - noctalia.service
+        - swayidle.service
 
   #- type: gschema-overrides
   #  include:

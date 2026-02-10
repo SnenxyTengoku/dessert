@@ -20,7 +20,6 @@
 
 // configurations
 include "/usr/share/mazurek/niri/environment.kdl" // environment variables
-include "/usr/share/mazurek/niri/startup.kdl" // startup
 include "/usr/share/mazurek/niri/inputs.kdl" // inputs
 
 include "/usr/share/mazurek/niri/layout.kdl" // window management layout
