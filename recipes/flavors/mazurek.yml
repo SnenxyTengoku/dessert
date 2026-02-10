@@ -29,7 +29,7 @@ modules:
   - type: containerfile
     snippets:
       # -- wayland wm utils
-      - COPY --from=ghcr.io/snenxytengoku/helper-wmutils /artifacts/usr /usr
+      #- COPY --from=ghcr.io/snenxytengoku/helper-wmutils /artifacts/usr /usr
       # -- cargo
       - COPY --from=ghcr.io/snenxytengoku/helper-cargo /artifacts/usr /usr
       # -- go

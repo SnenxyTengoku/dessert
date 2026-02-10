@@ -25,3 +25,4 @@ modules:
         - cliphist
         - kanshi
         - matugen
+        - sway-audio-idle-inhibit

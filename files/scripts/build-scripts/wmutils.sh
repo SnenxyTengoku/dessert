@@ -12,11 +12,3 @@ mkdir -p /artifacts/wmutils-built/usr/bin
 #git clone https://github.com/saltnpepper97/stasis.git
 #cd stasis
 #cargo install --path . --root /artifacts/wmutils-built/usr
-
-# SwayAudioIdleInhibit - https://github.com/ErikReider/SwayAudioIdleInhibit
-cd /tmp
-git clone https://github.com/ErikReider/SwayAudioIdleInhibit
-cd SwayAudioIdleInhibit
-meson setup build -Dlogind-provider=systemd
-meson --prefix /usr compile -C build
-meson --destdir "/artifacts/wmutils-built" install -C build
