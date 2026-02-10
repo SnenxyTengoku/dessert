@@ -18,5 +18,5 @@ cd /tmp
 git clone https://github.com/ErikReider/SwayAudioIdleInhibit
 cd SwayAudioIdleInhibit
 meson setup build -Dlogind-provider=systemd
-meson compile -C build --prefix /usr
-meson install -C build --destdir "/artifacts/wmutils-built"
+meson --prefix /usr compile -C build
+meson --destdir "/artifacts/wmutils-built" install -C build
