@@ -3,4 +3,4 @@
 // ╰─────────╯
 // 📖 https://niri-wm.github.io/niri/Configuration:-Miscellaneous
 
-spawn-at-startup
+spawn-at-startup "/usr/bin/kanshi"

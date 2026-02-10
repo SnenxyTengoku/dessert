@@ -96,3 +96,8 @@ layer-rule {
     match namespace="^noctalia-overview*"
     place-within-backdrop true
 }
+
+// ╭────────────╮
+// │ workspaces │
+// ╰────────────╯
+// 📖 https://niri-wm.github.io/niri/Configuration:-Named-Workspaces
