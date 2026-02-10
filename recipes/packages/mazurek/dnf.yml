@@ -23,4 +23,5 @@ modules:
 
         # extra
         - cliphist
+        - kanshi
         - matugen
