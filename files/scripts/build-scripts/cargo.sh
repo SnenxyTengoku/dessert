@@ -27,7 +27,7 @@ cargo install krabby --root /artifacts/cargo-built/usr
 cargo install rmpc --locked --root /artifacts/cargo-built/usr
 
 # MPD Discord RPC - https://github.com/JakeStanger/mpd-discord-rpc
-#cargo install mpd-discord-rpc --locked --root /artifacts/cargo-built/usr
+cargo install mpd-discord-rpc --locked --root /artifacts/cargo-built/usr
 
 # Rescrobbled - https://github.com/InputUsername/rescrobbled
 cargo install rescrobbled --root /artifacts/cargo-built/usr
