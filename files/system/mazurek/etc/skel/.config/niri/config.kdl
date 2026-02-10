@@ -18,4 +18,4 @@
 
 include "/etc/niri/config.kdl"
 
-include optional=true "local.kdl"
+//include optional=true "local.kdl"

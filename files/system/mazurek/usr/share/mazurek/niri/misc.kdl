@@ -13,6 +13,6 @@ hotkey-overlay {
 
 // noctalia configurations
 debug {
-  // Allows notification actions and window activation from Noctalia.
-  honor-xdg-activation-with-invalid-serial
+    // Allows notification actions and window activation from Noctalia.
+    honor-xdg-activation-with-invalid-serial
 }

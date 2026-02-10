@@ -23,13 +23,15 @@ input {
     focus-follows-mouse max-scroll-amount="10%"
 }
 
+gestures {
+    hot-corners {
+        off
+    }
+}
+
 cursor {
     xcursor-theme "Bibata-Modern-Ice"
     xcursor-size 24
-}
-
-hot-corners {
-    off
 }
 
 // ╭──────────╮
