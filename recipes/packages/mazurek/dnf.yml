@@ -7,6 +7,7 @@ modules:
       packages:
         # shell
         - noctalia-shell
+        - plasma-workspace
 
         # utilities
         - ark
@@ -23,7 +24,6 @@ modules:
 
         # extra
         - cliphist
-        - kanshi
         - matugen
         - sway-audio-idle-inhibit
         - swayidle
