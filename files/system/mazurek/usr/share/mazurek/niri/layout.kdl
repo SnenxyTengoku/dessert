@@ -16,18 +16,11 @@ layout {
     border {
         on
         width 2
+
+        // default niri colors, but gets set by noctalia
         active-color "#ffc87f"
         inactive-color "#505050"
-
-        // Color of the border around windows that request your attention.
         urgent-color "#9b0000"
-
-        // Gradients can use a few different interpolation color spaces.
-        // For example, this is a pastel rainbow gradient via in="oklch longer hue".
-        //
-        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
-
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     shadow {
@@ -37,6 +30,26 @@ layout {
         offset x=0 y=5
         color "#0007"
     }
+}
+
+// ╭────────────╮
+// │ workspaces │
+// ╰────────────╯
+// 📖 https://niri-wm.github.io/niri/Configuration:-Named-Workspaces
+
+// dedicated chat workspace
+workspace "chat" {
+    open-on-output "HDMI-A-1" // "secondary" monitor, where chats will live
+}
+
+// browser and internet-related applications workspace
+workspace "browser" {
+    open-on-output "DP-1" // "main" monitor
+}
+
+// terminals, editors and etc. workspace
+workspace "console" {
+    open-on-output "DP-1"
 }
 
 // ╭──────────────╮
@@ -50,18 +63,56 @@ window-rule {
     clip-to-geometry true
 }
 
+// list of applications that should open on the "chat" workspace
+window-rule {
+    match app-id=r#"^org\.gajim\.Gajim$"# // gajim
+    match app-id=r#"^org\.nicotine_plus\.Nicotine$"# // nicotine plus
+    match app-id=r#"^org\.signal\.Signal$"# // signal
+    match app-id=r#"discord$"# // discord
+    match app-id=r#"materialgram$"# // materialgram
+
+    open-on-workspace "chat"
+}
+
+// list of applications that should open on the "browser" workspace
+window-rule {
+    match app-id=r#"^net\.thunderbird\.Thunderbird$"# // thunderbird
+    match app-id=r#"firefox$"# // firefox
+    match app-id=r#"helium$"# // helium browser
+
+    open-on-workspace "browser"
+}
+
+// list of applications that should open on the "console" workspace
+window-rule {
+    match app-id=r#"codium$"# // vscodium
+    match app-id=r#"wezterm$"# // wezterm
+
+    open-on-workspace "console"
+}
+
+// list of applications that should open "maximized" by default
+window-rule {
+    match app-id=r#"firefox$"# // firefox
+    match app-id=r#"helium$"# // helium browser
+    match app-id=r#"codium$"# // vscodium
+
+    open-maximized-to-edges true
+}
+
 // open picture-in-picture players as floating by default
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    match title="^Picture in picture$"
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$" // firefox's pip
+    match title="^Picture in picture$" // chromium-based pip's
+
     open-floating true
 }
 
-// block password managers from video recordings/screencasts
+// block sensitive applications from video recordings/screencasts
 window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-    match app-id=r#"^com\.bitwarden\.desktop$"#
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"# // keepassxc
+    match app-id=r#"^org\.gnome\.World\.Secrets$"# // gnome secrets
+    match app-id=r#"^com\.bitwarden\.desktop$"# // bitwarden
 
     block-out-from "screencast"
 }
@@ -69,6 +120,7 @@ window-rule {
 // position gpu-screen-recorder notifications correctly
 window-rule {
     match title="^gsr notify$"
+
     default-floating-position x=10 y=10 relative-to="top-right"
     open-focused false
 }
@@ -76,15 +128,22 @@ window-rule {
 // position steam notifications correctly
 window-rule {
     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+
     default-floating-position x=10 y=10 relative-to="bottom-right"
     open-focused false
+}
+
+// blurred wallpaper in niri's overview
+layer-rule {
+    match namespace="^noctalia-overview*"
+    place-within-backdrop true
 }
 
 // special case: make windowkill "fake fullscreen" properly
 window-rule {
     match app-id=r#"windowkill$"#
     
-    open-maximized true
+    open-maximized-to-edges true
     open-floating true
     draw-border-with-background false
     geometry-corner-radius 0
@@ -98,17 +157,3 @@ window-rule {
         off
     }
 }
-
-// blurred wallpaper in niri's overview
-layer-rule {
-    match namespace="^noctalia-overview*"
-    place-within-backdrop true
-}
-
-// ╭────────────╮
-// │ workspaces │
-// ╰────────────╯
-// 📖 https://niri-wm.github.io/niri/Configuration:-Named-Workspaces
-
-workspace "chat"
-workspace "browser"
