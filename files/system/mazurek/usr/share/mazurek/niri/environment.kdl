@@ -1,7 +1,15 @@
 // ╭───────────────────────╮
 // │ environment variables │
 // ╰───────────────────────╯
+// 📖 https://niri-wm.github.io/niri/Configuration:-Miscellaneous#environment
 
 environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
 }
+
+// ╭─────────╮
+// │ startup │
+// ╰─────────╯
+// 📖 https://niri-wm.github.io/niri/Configuration:-Miscellaneous#spawn-at-startup
+
+spawn-at-startup "sway-audio-idle-inhibit"
