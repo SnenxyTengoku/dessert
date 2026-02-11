@@ -13,3 +13,4 @@ environment {
 // 📖 https://niri-wm.github.io/niri/Configuration:-Miscellaneous#spawn-at-startup
 
 spawn-at-startup "sway-audio-idle-inhibit"
+spawn-sh-at-startup "sleep 5; systemctl --user restart mpdris2-rs.service" // noctalia starts up too late for mpdris2 to register. TODO: replace this with a better solution
