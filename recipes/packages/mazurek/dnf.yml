@@ -26,3 +26,4 @@ modules:
         - kanshi
         - matugen
         - sway-audio-idle-inhibit
+        - swayidle
