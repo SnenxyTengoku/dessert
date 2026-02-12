@@ -8,16 +8,17 @@ configurations:
       title: "Flathub (system-wide)"
     install:
       # internet and chat
-      - chat.delta.desktop
       - io.github.kukuruzka165.materialgram
       - io.github.moonlight_mod.moonlight-installer
       - org.gajim.Gajim
+      - org.mozilla.Thunderbird
       - org.nicotine_plus.Nicotine
       - org.qbittorrent.qBittorrent
       - org.signal.Signal
 
       # office
       - md.obsidian.Obsidian
+      - org.libreoffice.LibreOffice
 
       # media production, editing software
       - com.dec05eba.gpu_screen_recorder

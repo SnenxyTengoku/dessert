@@ -22,10 +22,6 @@ modules:
         - speedtest-cli
         - torbrowser-launcher
 
-        # "Office"
-        - libreoffice
-        - thunderbird
-
         # misc
         - docker-compose
         - mpv
