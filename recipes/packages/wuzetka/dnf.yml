@@ -5,6 +5,8 @@ repos:
   copr:
     - deltacopy/darkly
     - matinlotfali/KDE-Rounded-Corners
+  files:
+    - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
 install:
   skip-unavailable: true
   packages:
