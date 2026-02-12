@@ -1,0 +1,43 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/sernik-tech/<name>
+name: mazurek-validity
+# description will be included in the image's metadata
+description: mazurek with python-validity drivers
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/snenxytengoku/mazurek
+image-version: latest # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+    - type: dnf
+      remove:
+        packages:
+          - fprintd
+          - fprintd-pam
+    
+    - type: dnf
+      repos:
+        copr:
+          - sneexy/python-validity
+      install:
+        packages:
+          - open-fprintd
+          - fprintd-clients
+          - fprintd-clients-pam
+          - python3-validity
+
+    - type: systemd
+      system:
+        enabled:
+          - open-fprintd.service
+          - python3-validity.service
+          - open-fprintd-restart-after-resume.service
+          - python3-validity-restart-after-resume.service
+        disabled:
+          - open-fprintd-resume.service
+          - open-fprintd-suspend.service
+
+    - type: signing
