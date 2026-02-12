@@ -1,6 +1,7 @@
 modules:
   - type: dnf
     repos:
+      cleanup: true
       nonfree: negativo17
       copr:
         - imput/helium
@@ -90,27 +91,28 @@ modules:
         - waydroid
 
         # music
-        - https://github.com/patryk-ku/music-discord-rpc/releases/latest/download/music-discord-rpc.rpm
+        #- https://github.com/patryk-ku/music-discord-rpc/releases/latest/download/music-discord-rpc.rpm
         - ncmpcpp
+        - rmpc
 
         # cli
+        - atuin
         - bat
         - btop
+        - cava
         - duf
         - eza
         - fastfetch
-        - cava
         - fd-find
         - ffmpeg
         - figlet
         - fzf
-        - gdisk
-        - git-delta
         - ImageMagick
         - knock
+        - krabby
         - neovim
-        - pv
         - ripgrep
+        - rust-starship
         - wezterm
         - yt-dlp
         - zoxide

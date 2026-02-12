@@ -8,8 +8,9 @@ system:
     - wpa_supplicant.service
 user:
   enabled:
+    - mpd-discord-rpc.service
     - mpd.service
     - mpdris2-rs.service
-    - music-discord-rpc.service
     - rescrobbled.service
     - systemd-tmpfiles-setup.service
+    #- music-discord-rpc.service

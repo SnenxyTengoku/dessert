@@ -7,25 +7,6 @@ set -euo pipefail
 dnf install -y git gcc gcc-c++ cmake openssl protobuf protobuf-devel protobuf-compiler openssl-devel dbus-devel pkgconf-pkg-config rust-rustix-devel rustup cargo
 mkdir -p /artifacts/cargo-built/usr/bin
 
-# Atuin - https://github.com/atuinsh/atuin
-cargo install atuin --root /artifacts/cargo-built/usr
-#cd /tmp
-#git clone https://github.com/atuinsh/atuin.git
-#cd atuin/crates/atuin
-#cargo install --path . --root /artifacts/cargo-built/usr
-
-# Starship - https://starship.rs/
-cargo install starship --locked --root /artifacts/cargo-built/usr
-
-# sd - https://github.com/chmln/sd.git
-cargo install sd --root /artifacts/cargo-built/usr
-
-# Krabby - https://github.com/yannjor/krabby
-cargo install krabby --root /artifacts/cargo-built/usr
-
-# Rusty Music Player Client - https://github.com/mierak/rmpc
-cargo install rmpc --locked --root /artifacts/cargo-built/usr
-
 # MPD Discord RPC - https://github.com/JakeStanger/mpd-discord-rpc
 cargo install mpd-discord-rpc --locked --root /artifacts/cargo-built/usr
 

@@ -1,29 +1,29 @@
-modules:
-  - type: dnf
-    repos:
-      nonfree: negativo17
-    install:
-      skip-unavailable: true
-      packages:
-        # shell
-        - noctalia-shell
-        - plasma-workspace
+type: dnf
+repos:
+  cleanup: true
+  nonfree: negativo17
+install:
+  skip-unavailable: true
+  packages:
+    # shell
+    - noctalia-shell
+    - plasma-workspace
 
-        # utilities
-        - ark
-        - baobab
-        - dolphin
-        - dolphin-plugins
-        - kate
+    # utilities
+    - ark
+    - baobab
+    - dolphin
+    - dolphin-plugins
+    - kate
 
-        # themes
-        - adw-gtk3-theme
-        - nwg-look
-        - plasma-breeze
-        - qt6ct
+    # themes
+    - adw-gtk3-theme
+    - nwg-look
+    - plasma-breeze
+    - qt6ct
 
-        # extra
-        - cliphist
-        - matugen
-        - sway-audio-idle-inhibit
-        - swayidle
+    # extra
+    - cliphist
+    - matugen
+    - sway-audio-idle-inhibit
+    - swayidle

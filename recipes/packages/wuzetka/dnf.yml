@@ -1,5 +1,6 @@
 type: dnf
 repos:
+  cleanup: true
   nonfree: negativo17
   copr:
     - deltacopy/darkly
