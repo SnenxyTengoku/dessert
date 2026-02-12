@@ -28,7 +28,6 @@ modules:
 
         # misc
         - docker-compose
-        - kernel-modules-extra
         - mpv
         - nextcloud-client
         - pipx
