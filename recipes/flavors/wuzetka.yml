@@ -13,7 +13,7 @@ modules:
   - from-file: packages/flatpaks.yml # base default flatpaks
   - from-file: packages/wuzetka/dnf.yml # wuzetka package selection
   - from-file: packages/wuzetka/flatpaks.yml # wuzetka flatpak selection
-  - from-file: kernels/bazzite.yml # bazzite kernel
+  #- from-file: kernels/bazzite.yml # bazzite kernel
 
   # pre-run
   - from-file: shared/files.yml # shared base filesystem
