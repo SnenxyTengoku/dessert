@@ -13,7 +13,6 @@ modules:
   - from-file: packages/flatpaks.yml # base default flatpaks
   - from-file: packages/mazurek/dnf.yml # mazurek package selection
   - from-file: packages/mazurek/flatpaks.yml # mazurek flatpak flatpaks
-  #- from-file: kernels/bazzite.yml # bazzite kernel
 
   # pre-run
   - from-file: shared/files.yml # shared base filesystem
