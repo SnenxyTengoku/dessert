@@ -72,6 +72,7 @@ window-rule {
     match app-id=r#"materialgram$"# // materialgram
 
     open-on-workspace "chat"
+    open-focused true // makes it less annoying to realize where new windows went
 }
 
 // list of applications that should open on the "browser" workspace
@@ -81,6 +82,7 @@ window-rule {
     match app-id=r#"helium$"# // helium browser
 
     open-on-workspace "browser"
+    open-focused true
 }
 
 // list of applications that should open on the "console" workspace
@@ -89,6 +91,7 @@ window-rule {
     match app-id=r#"wezterm$"# // wezterm
 
     open-on-workspace "console"
+    open-focused true
 }
 
 // list of applications that should open "maximized" by default
