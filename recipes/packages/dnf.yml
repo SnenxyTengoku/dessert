@@ -107,7 +107,7 @@ modules:
         - krabby
         - neovim
         - ripgrep
-        - rust-starship
+        - starship
         - wezterm
         - yt-dlp
         - zoxide

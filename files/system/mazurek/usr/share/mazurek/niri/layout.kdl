@@ -97,7 +97,7 @@ window-rule {
     match app-id=r#"helium$"# // helium browser
     match app-id=r#"codium$"# // vscodium
 
-    open-maximized-to-edges true
+    open-maximized true
 }
 
 // open picture-in-picture players as floating by default
