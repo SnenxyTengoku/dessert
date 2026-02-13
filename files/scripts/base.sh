@@ -16,7 +16,6 @@ sed -i 's@ExecStart=%h/.cargo/bin/rescrobbled@ExecStart=/usr/bin/rescrobbled@g' 
 # mpdris2-rs systemd service
 curl -sL -o /usr/lib/systemd/user/mpdris2-rs.service https://raw.githubusercontent.com/szclsya/mpdris2-rs/refs/heads/trunk/misc/mpdris2-rs.service
 sed -i 's@ExecStart=/usr/local/bin/mpdris2-rs@ExecStart=/usr/bin/mpdris2-rs@g' /usr/lib/systemd/user/mpdris2-rs.service # set correct bin location
-sed -i 's@Wants=mpd.service@Wants=mpd.service noctalia.service@g' /usr/lib/systemd/user/mpdris2-rs.service # start it after noctalia shell starts to prevent startup issues
 
 # tlrc files
 curl -sL -o /usr/share/bash-completion/completions/tldr https://raw.githubusercontent.com/tldr-pages/tlrc/main/completions/tldr.bash
