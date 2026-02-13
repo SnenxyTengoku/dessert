@@ -21,7 +21,6 @@ configurations:
       - org.libreoffice.LibreOffice
 
       # media production, editing software
-      - com.dec05eba.gpu_screen_recorder
       - com.github.taiko2k.avvie
       - com.obsproject.Studio
       - com.obsproject.Studio.Plugin.Gstreamer
@@ -49,6 +48,7 @@ configurations:
       - io.gitlab.azymohliad.WatchMate
       - it.mijorus.gearlever
       - net.davidotek.pupgui2
+      - org.kde.okteta
       - page.codeberg.JakobDev.jdAnimatedImageEditor
       - page.codeberg.JakobDev.jdPixelUpscaler
 

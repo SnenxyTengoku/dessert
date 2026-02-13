@@ -11,4 +11,4 @@ configurations:
       - io.github.Qalculate.qalculate-qt
 
       # (desktop) utilities
-      - org.kde.okteta
+      - com.dec05eba.gpu_screen_recorder
