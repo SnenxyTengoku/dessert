@@ -110,10 +110,10 @@ window-rule {
 
 // block sensitive applications from video recordings/screencasts
 window-rule {
-    match app-id=r#"^com\.bitwarden\.desktop$"# // bitwarden
-    match app-id=r#"^net\.thunderbird\.Thunderbird$"# // thunderbird
     match app-id=r#"^org\.gnome\.World\.Secrets$"# // gnome secrets
     match app-id=r#"^org\.keepassxc\.KeePassXC$"# // keepassxc
+    match app-id=r#"^org\.thunderbird\.Thunderbird$"# // thunderbird
+    match app-id=r#"Bitwarden$"# // bitwarden
 
     block-out-from "screencast"
 }
