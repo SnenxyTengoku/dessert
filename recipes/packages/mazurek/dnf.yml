@@ -17,6 +17,7 @@ install:
     - dolphin
     - dolphin-plugins
     - kate
+    - kde-connect
 
     # themes
     - adw-gtk3-theme
