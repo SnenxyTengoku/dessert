@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-
-set -ouex pipefail
+set -euox pipefail
 
 # script by askpng
 # https://github.com/askpng/solarpowered/blob/main/files/scripts/kernels/kernel-bazzite.sh

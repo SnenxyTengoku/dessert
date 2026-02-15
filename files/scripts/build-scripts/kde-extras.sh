@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-
-#
-# This script mass builds multiple plasma, kwin and other types of extensions for the wuzetka image.
-#
-set -euo pipefail
+set -euox pipefail
 
 # Create directory where all compiled things go into
 mkdir -p /artifacts/kde-extras-built

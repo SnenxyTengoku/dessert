@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-
-
 set -euox pipefail
 
 git clone https://github.com/hhd-dev/hwfirm /tmp/hwfirm --depth 1

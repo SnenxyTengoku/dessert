@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -oue pipefail
+set -euox pipefail
 
 # in case for some reason yt-dlp won't download: use this script instead
 # just grabs the binary directly from github and installs it

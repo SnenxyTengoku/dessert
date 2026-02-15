@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
-
-set -euo pipefail
+set -euox pipefail
 
 # Originally, this script used the official catppuccin gtk repo, but that has since been archived.
 # However, the theme it was based on, Colloid, includes catppuccin officially, so we just use that now.

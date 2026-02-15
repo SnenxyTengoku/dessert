@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
-
-set -euo pipefail
+set -euox pipefail
 
 # Dependency and folder
 dnf install -y golang git

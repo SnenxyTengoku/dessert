@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
-
-set -euo pipefail
+set -euox pipefail
 
 # Dependency and folder
 dnf install -y git gcc gcc-c++ cmake openssl protobuf protobuf-devel protobuf-compiler openssl-devel dbus-devel pkgconf-pkg-config rust-rustix-devel rustup cargo

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # taken from https://github.com/AuraHerreroRuiz/auraos !!
 # https://github.com/AuraHerreroRuiz/auraos/blob/main/config/scripts/posy-cursors.sh
+set -euox pipefail
 
-set -oue pipefail
 #clone git repository
 cd /tmp
 git clone "https://github.com/AuraHerreroRuiz/Posys-improved-cursors-linux.git"

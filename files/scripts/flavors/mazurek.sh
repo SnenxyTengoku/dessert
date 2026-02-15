@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 set -euox pipefail
 
 # Catppuccinify SDDM theme

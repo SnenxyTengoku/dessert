@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
-
-set -euo pipefail
+set -euox pipefail
 
 # Create theme directory
 mkdir -p /artifacts/catppuccin-papirus/usr/share/icons

@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-
-
 set -euox pipefail
 
 # Ensure all required/used folders are created
