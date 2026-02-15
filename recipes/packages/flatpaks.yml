@@ -8,7 +8,6 @@ configurations:
       title: "Flathub (system-wide)"
     install:
       # internet and chat
-      - io.github.kukuruzka165.materialgram
       - io.github.moonlight_mod.moonlight-installer
       - org.gajim.Gajim
       - org.mozilla.Thunderbird
