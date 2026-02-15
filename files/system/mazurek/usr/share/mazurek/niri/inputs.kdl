@@ -20,7 +20,7 @@ input {
     }
 
     // focus windows on cursor hover (if they're *mostly* on screen)
-    focus-follows-mouse max-scroll-amount="10%"
+    focus-follows-mouse max-scroll-amount="80%"
 }
 
 gestures {
