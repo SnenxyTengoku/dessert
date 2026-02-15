@@ -23,6 +23,7 @@ install:
     - adw-gtk3-theme
     - nwg-look
     - plasma-breeze
+    - qt5ct
     - qt6ct
 
     # extra
