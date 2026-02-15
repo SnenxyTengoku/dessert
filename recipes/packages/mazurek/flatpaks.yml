@@ -8,14 +8,20 @@ configurations:
       title: "Flathub (system-wide)"
     install:
       # (desktop) utilities
-      - app.drey.Dialect
+      - io.github.denysmb.klaro
       - io.github.giantpinkrobots.flatsweep
-      - org.gnome.Calculator
-      - org.gnome.Loupe
-      - org.gnome.Papers
-      - org.gnome.SimpleScan
-      - org.gnome.Snapshot
+      - org.kde.arianna
+      - org.kde.filelight
+      - org.kde.gwenview
+      - org.kde.kalk
+      - org.kde.kamoso
+      - org.kde.kasts
+      - org.kde.kclock
+      - org.kde.kweather
       - org.kde.okteta
+      - org.kde.okular
+      - org.kde.optiimage
+      - org.kde.skanpage
 
       # themes
       - org.gtk.Gtk3theme.adw-gtk3
