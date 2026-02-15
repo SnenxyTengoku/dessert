@@ -1,69 +1,72 @@
-# Dessert &nbsp; [![image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build.yml) [![python-validity image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-validity.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-validity.yml) [![containers build badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/containers.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/containers.yml)
+# dessert &nbsp; [![image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build.yml) [![python-validity image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-validity.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-validity.yml) [![containers build badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/containers.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/containers.yml)
 
-Custom [Atomic](https://docs.fedoraproject.org/en-US/emerging) [Fedora](https://fedoraproject.org) images built using [BlueBuild](https://blue-build.org), based on the extra works of [Universal Blue](https://universal-blue.org).
+custom [Atomic](https://docs.fedoraproject.org/en-US/emerging) [Fedora](https://fedoraproject.org) images built using [BlueBuild](https://blue-build.org), based on the extra works of [Universal Blue](https://universal-blue.org).
 
-Named Dessert, because they are sweet. `:]]`
+these are *personal images* built for myself. they include a *bunch* of default applications, modifications, and opinionated changes mainly for personal use that will most likely not be comfortable for anyone else out of the box.
 
-These flavors <small>(otherwise *"images"*, but like, y'know, dessert)</small> are heavily opinionated and customized, mainly only meant for personal use, but are available for other's use if preferred.
+with that said, feel free to test my images or grab anything from here if you're looking to build something yourself.
 
-I don't provide support or anything - these are for myself, anyways.
+i don't provide support or anything - these are for myself, anyways. refer to the [BlueBuild documentation](https://blue-build.org/learn/getting-started/) to build something yourself! or look at [my base images](https://github.com/SnenxyTengoku/base-images) made to provide usable templates for others.
 
-## Wuzetka <sub>`wuzetka`</sub>
+## `wuzetka`
 
-My main customized flavor, based on Fedora Kinoite (KDE Plasma). Focused on a fully personalized custom experience, themed around based on the Catppuccin Mocha theme with the Green accent color. Given a modern, flat look out of the box.
-
-Features many extensions on the Plasma desktop and custom utilities and tools for general use and gaming.
+my customized flavor based on [Fedora Kinoite](https://fedoraproject.org/atomic-desktops/kinoite) (KDE Plasma). focused on a fully personalized custom experience, themed around and based on the Catppuccin Mocha color scheme with green accent colors. given a modern look out of the box.
 
 > [!CAUTION]
-> [Generating an ISO](https://blue-build.org/how-to/generate-iso/) to use to install this flavor <b>may not work or function/install correctly</b>. I recommend installing vanilla Fedora Kinoite first then [rebasing](#installation) to this flavor afterwards.
+> [generating an ISO](https://blue-build.org/how-to/generate-iso/) to use to install this flavor <b>may not work or function/install correctly</b>. there is better luck installing vanilla Fedora Kinoite first then [rebasing](#installation) to this flavor afterwards.
 
-### Wuzetka Validity <sub>`wuzetka-validity`</sub>
+## `mazurek`
 
-The same flavor as Wuzetka, but it replaces `fprintd` packages with [python-validity](https://github.com/uunicorn/python-validity) to allow support for using "unsupported" fingerprint sensors on certain devices, such as the Thinkpad T480.
+a fully custom Fedora Atomic desktop with [niri](https://niri-wm.github.io/) and [Noctalia Shell](https://noctalia.dev/), to provide a unique scrolling experience. like wuzetka, also themed around Catppuccin Mocha with green accents.
 
-## Mazurek <sub>`mazurek`</sub>
+### `wuzetka-validity`, `mazurek-validity`
 
-A custom Fedora Atomic desktop with Niri and Noctalia Shell, to provide a unique experience. Includes utilities to allow for an easy migration between Wuzetka and Mazurek and back.
+their respective images, but it replaces the `fprintd` family with [python-validity](https://github.com/uunicorn/python-validity) to allow fingerprint sensors from certain devices (like the Thinkpad T480) to work.
 
-## Installation
+## installation
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+to rebase an existing atomic Fedora installation to the latest build:
 
-To rebase an existing atomic Fedora installation to the latest build:
-
-- First rebase to the unsigned flavor, to get the proper signing keys and policies installed:
+- first, rebase to the unsigned flavor, to get the proper signing keys and policies installed:
   ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/SnenxyTengoku/<flavor>:latest
   ```
-- Reboot to complete the rebase:
+- reboot to complete the rebase:
   ```
   systemctl reboot
   ```
-- Then rebase to the signed flavor, like so:
+- then rebase to the signed flavor, like so:
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/SnenxyTengoku/<flavor>:latest
   ```
-- Reboot again to complete the installation
+- reboot again to complete the installation!
   ```
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+> [!CAUTION]
+> ideally, our images prefer using bootc instead of rpm-ostree for managing deployements. if you've used rpm-ostree to install packages or otherwise have made your own modifications, chances are they will conflict with bootc until you reset/revert them.
+>
+> if you're already on a bootc-based installation, migrating is made easier:
+> ```
+> sudo bootc switch ghcr.io/SnenxyTengoku/<flavor>:latest
+> ```
+> then simply:
+> ```
+> systemctl reboot
+> ```
 
-## ISO
+the `latest` tag will automatically point to the latest build. that build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+## verification
 
-## Verification
-
-These flavors are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+these flavors are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). you can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
 cosign verify --key cosign.pub ghcr.io/SnenxyTengoku/<flavor>
 ```
 
-## Credits
+## credits
 
 - [BlueBuild](https://blue-build.org) and [Universal Blue](https://universal-blue.org/) for their tools, patches and various work, obviously.
 - [askpng](https://github.com/askpng) for [solarpowered](https://github.com/askpng/solarpowered), inspiring this repository's structure and for their kernel scripts.
