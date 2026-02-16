@@ -1,0 +1,9 @@
+[Context]
+filesystems=xdg-config/kdeglobals:ro;xdg-config/gtk-4.0:ro;xdg-config/gtk-3.0:ro;xdg-run/discord-ipc-*;xdg-run/.flatpak/org.equicord.equibop:create;xdg-run/.flatpak/dev.vencord.Vesktop:create;xdg-config/fontconfig:ro;/etc/wuzetka-system:ro;~/.themes:ro;~/.local/share/themes:ro
+
+[Environment]
+ICON_THEME=Papirus-Dark
+XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
+XCURSOR_SIZE=24
+XCURSOR_THEME=Bibata-Modern-Mocha-Light
+QT_QPA_PLATFORMTHEME=kde
