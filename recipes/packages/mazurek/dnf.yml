@@ -11,6 +11,7 @@ install:
     - noctalia-shell
     - plasma-workspace # better compatibility with kde/qt applications
     - xfce4-settings # easier to use for certain actions e.g. setting default applications
+    - xdg-desktop-portal-kde # qt theming compatibility
 
     # utilities
     - ark
