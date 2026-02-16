@@ -9,7 +9,8 @@ install:
   packages:
     # shell
     - noctalia-shell
-    - plasma-workspace
+    - plasma-workspace # better compatibility with kde/qt applications
+    - xfce4-settings # easier to use for certain actions e.g. setting default applications
 
     # utilities
     - ark
