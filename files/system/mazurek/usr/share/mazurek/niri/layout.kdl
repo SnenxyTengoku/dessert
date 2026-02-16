@@ -7,7 +7,7 @@ layout {
     gaps 8
     center-focused-column "on-overflow"
     default-column-width { proportion 0.5; }
-    
+
     // disable focus ring (we prefer borders)
     focus-ring {
         off
@@ -87,7 +87,7 @@ window-rule {
 
 // list of applications that should open on the "console" workspace
 window-rule {
-    match app-id=r#"codium$"# // vscodium
+    match app-id=r#"^dev\.zed\.Zed$"# // zed
     match app-id=r#"wezterm$"# // wezterm
 
     open-on-workspace "console"
@@ -146,7 +146,7 @@ layer-rule {
 // special case: make windowkill "fake fullscreen" properly
 window-rule {
     match app-id=r#"windowkill$"#
-    
+
     open-maximized-to-edges true
     open-floating true
     draw-border-with-background false

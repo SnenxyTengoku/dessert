@@ -14,7 +14,7 @@ scripts:
   # extra software
   - additions/b2.sh
   - additions/lazyvim.sh
-  - additions/vscodium.sh
+  #- additions/vscodium.sh
   # various additions
   - additions/flacconv.sh
   - additions/just.sh

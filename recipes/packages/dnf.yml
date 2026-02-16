@@ -31,7 +31,8 @@ modules:
         - syncthing
         - tailscale
         - topgrade
-      
+        - zed
+
         # beets
         - beets
         - beets-doc
