@@ -41,21 +41,22 @@ cursor {
 binds {
     Mod+Return hotkey-overlay-title="Open a Terminal" { spawn "wezterm"; } // terminal
     Mod+Space hotkey-overlay-title="Open Overview" repeat=false { toggle-overview; } // overview (and launcher)
-    Super+L hotkey-overlay-title="Lock the Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; } // lockscreen
-    Super+Escape hotkey-overlay-title="Session Options" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; } // session options
+    Mod+L hotkey-overlay-title="Lock the Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; } // lockscreen
+    Mod+Ctrl+Alt+L allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; } // emergency lockscreen summon command
+    Mod+Escape hotkey-overlay-title="Session Options" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; } // session options
 
-    Super+Period hotkey-overlay-title="Emoji selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "emoji"; } // emoji selector
-    Super+V hotkey-overlay-title="Clipboard history" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; } // clipboard history
+    Mod+Period hotkey-overlay-title="Emoji selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "emoji"; } // emoji selector
+    Mod+V hotkey-overlay-title="Clipboard history" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; } // clipboard history
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    Mod+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // volume keys
-    XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
-    XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
-    XF86AudioMute { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
+    XF86AudioMute allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
     XF86AudioMicMute allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteInput"; }
 
     // media keys
@@ -166,8 +167,8 @@ binds {
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
 
-    Mod+Comma  { consume-window-into-column; }
-    Mod+Period { expel-window-from-column; }
+    Mod+Ctrl+Comma  { consume-window-into-column; }
+    Mod+Ctrl+Period { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
@@ -195,7 +196,7 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+Shift+V       { toggle-window-floating; }
+    Mod+Ctrl+V       { toggle-window-floating; }
     Mod+Ctrl+Shift+V { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
@@ -212,8 +213,8 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Mod+Print { screenshot-screen; }
+    Ctrl+Print { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
@@ -224,10 +225,6 @@ binds {
     // The allow-inhibiting=false property can be applied to other binds as well,
     // which ensures niri always processes them, even when an inhibitor is active.
     Mod+Ctrl+Alt+Delete allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-
-    // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
