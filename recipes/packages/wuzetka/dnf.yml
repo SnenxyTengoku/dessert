@@ -6,6 +6,7 @@ repos:
     - deltacopy/darkly
     - matinlotfali/KDE-Rounded-Corners
   files:
+    - https://download.opensuse.org/repositories/home:mkittler/Fedora_43/home:mkittler.repo # hardcoded version because they take a while to bump to latest fedora when it releases
     - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
 install:
   skip-unavailable: true
