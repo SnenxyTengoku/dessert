@@ -13,6 +13,4 @@ environment {
 // 📖 https://niri-wm.github.io/niri/Configuration:-Miscellaneous#spawn-at-startup
 
 spawn-at-startup "sway-audio-idle-inhibit" // SwayAudioIdleInhibit, pauses swayidle while media is playing
-
-spawn-at-startup "/usr/bin/kdeconnectd" // KDE Connect daemon
 spawn-at-startup "kdeconnect-indicator" // KDE Connect indicator
