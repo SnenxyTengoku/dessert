@@ -30,6 +30,7 @@ modules:
         - syncthing
         - tailscale
         - topgrade
+        - wev
         - zed
 
         # beets
