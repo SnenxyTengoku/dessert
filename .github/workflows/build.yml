@@ -27,7 +27,6 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - flavors/kutia.yml
           - flavors/mazurek.yml
           - flavors/wuzetka.yml
     steps:

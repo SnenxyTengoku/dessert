@@ -1,10 +1,10 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: mazurek
-description: sneexy's personal and opinionated fedora niri image
+description: sneexy's personal and opinionated fedora niri & mangowc image
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/snenxytengoku/base-images/niri
+base-image: ghcr.io/snenxytengoku/base-images/kutia
 image-version: 43 # latest is also supported if you want new updates ASAP
 
 modules:
@@ -49,9 +49,15 @@ modules:
   # enable noctalia shell
   - type: systemd
     user:
+      disabled:
+        - mpdris2-rs.service # we use -niri and -mango variations for proper starting
       enabled:
         - kanshi.service
+        - mpdris2-rs-mango.service
+        - mpdris2-rs-niri.service
+        - noctalia-mango.service
         - noctalia-niri.service
+        - swayidle-mango.service
         - swayidle-niri.service
 
   #- type: gschema-overrides

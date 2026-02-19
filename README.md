@@ -17,11 +17,7 @@ a customized flavor based on [Fedora Kinoite](https://fedoraproject.org/atomic-d
 
 ## `mazurek`
 
-a fully customized Fedora Atomic desktop with [niri](https://niri-wm.github.io/) and [Noctalia Shell](https://noctalia.dev/), to provide a unique scrolling window management experience while also giving a fully compatible desktop environment.
-
-## `kutia`
-
-similar to `mazurek`, but using [MangoWC](https://github.com/DreamMaoMao/mangowc) as the window manager and customized around multiple layouts and a lighter base.
+a fully customized Fedora Atomic desktop utilizing [Noctalia Shell](https://noctalia.dev/), packaged with both [niri](https://niri-wm.github.io/) and [MangoWC](https://github.com/DreamMaoMao/mangowc/), to provide a unique window management experience while also giving a fully compatible desktop environment.
 
 ### `wuzetka-validity`, `mazurek-validity`
 

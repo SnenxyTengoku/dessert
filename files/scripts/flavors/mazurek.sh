@@ -11,4 +11,7 @@ rm -f /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/1.png
 ln -sf /usr/share/backgrounds/catppuccin/black-hole-mocha.png /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/1.png
 
 # mpdris2-rs systemd service
-sed -i 's@Wants=mpd.service@Wants=mpd.service noctalia-niri.service@g' /usr/lib/systemd/user/mpdris2-rs.service # start it after noctalia shell starts to prevent startup issues
+cp /usr/lib/systemd/user/mpdris2-rs.service /usr/lib/systemd/user/mpdris2-rs-niri.service
+cp /usr/lib/systemd/user/mpdris2-rs.service /usr/lib/systemd/user/mpdris2-rs-mango.service
+sed -i 's@Wants=mpd.service@Wants=mpd.service noctalia-niri.service@g' /usr/lib/systemd/user/mpdris2-rs-niri.service # start it after noctalia shell starts to prevent startup issues for niri
+sed -i 's@Wants=mpd.service@Wants=mpd.service noctalia-mango.service@g' /usr/lib/systemd/user/mpdris2-rs-mango.service # ditto, but for mangowc
