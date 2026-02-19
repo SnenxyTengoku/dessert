@@ -1,7 +1,7 @@
 [Unit]
-Description=Swayidle Idle Manager
+Description=Swayidle Idle Manager for niri
 PartOf=graphical-session.target
-Wants=niri.service
+Wants=mangowc.target
 After=graphical-session.target
 Requisite=graphical-session.target
 

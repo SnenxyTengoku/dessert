@@ -10,14 +10,18 @@ i don't provide support or anything - these are for myself, anyways. refer to th
 
 ## `wuzetka`
 
-my customized flavor based on [Fedora Kinoite](https://fedoraproject.org/atomic-desktops/kinoite) (KDE Plasma). focused on a fully personalized custom experience, themed around and based on the Catppuccin Mocha color scheme with green accent colors. given a modern look out of the box.
+a customized flavor based on [Fedora Kinoite](https://fedoraproject.org/atomic-desktops/kinoite) (KDE Plasma). focused on a fully personalized custom experience, themed around and based on the Catppuccin Mocha color scheme with green accent colors. given a modern look out of the box.
 
 > [!CAUTION]
 > [generating an ISO](https://blue-build.org/how-to/generate-iso/) to use to install this flavor <b>may not work or function/install correctly</b>. there is better luck installing vanilla Fedora Kinoite first then [rebasing](#installation) to this flavor afterwards.
 
 ## `mazurek`
 
-a fully custom Fedora Atomic desktop with [niri](https://niri-wm.github.io/) and [Noctalia Shell](https://noctalia.dev/), to provide a unique scrolling experience. like wuzetka, also themed around Catppuccin Mocha with green accents.
+a fully customized Fedora Atomic desktop with [niri](https://niri-wm.github.io/) and [Noctalia Shell](https://noctalia.dev/), to provide a unique scrolling window management experience while also giving a fully compatible desktop environment.
+
+## `kutia`
+
+similar to `mazurek`, but using [MangoWC](https://github.com/DreamMaoMao/mangowc) as the window manager and customized around multiple layouts and a lighter base.
 
 ### `wuzetka-validity`, `mazurek-validity`
 

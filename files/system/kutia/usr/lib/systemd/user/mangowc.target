@@ -1,0 +1,6 @@
+# provides mangowc a systemd service we hook onto to allow linking and starting services via systemd instead
+
+[Unit]
+Description=MangoWC Session Target
+Requires=graphical-session.target
+After=graphical-session.target

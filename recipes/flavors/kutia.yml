@@ -1,18 +1,18 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: mazurek
-description: sneexy's personal and opinionated fedora niri image
+name: kutia
+description: sneexy's personal and opinionated fedora mangowc image
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/snenxytengoku/base-images/niri
+base-image: ghcr.io/snenxytengoku/base-images/mangowc
 image-version: 43 # latest is also supported if you want new updates ASAP
 
 modules:
   # packages
   - from-file: packages/dnf.yml # base package selection
   - from-file: packages/flatpaks.yml # base default flatpaks
-  - from-file: packages/mazurek/dnf.yml # mazurek package selection
-  - from-file: packages/mazurek/flatpaks.yml # mazurek flatpak flatpaks
+  - from-file: packages/mazurek/dnf.yml # mazurek package selection - package selection so far is shared between mazurek and kutia
+  - from-file: packages/mazurek/flatpaks.yml # mazurek flatpak flatpaks - ditto
 
   # pre-run
   - from-file: shared/files.yml # shared base filesystem
@@ -21,7 +21,7 @@ modules:
   # mazurek files
   - type: files
     files:
-      - source: system/mazurek
+      - source: system/kutia
         destination: /
 
   # copy files and software from helper images
@@ -39,7 +39,7 @@ modules:
       # customization
       - additions/sddm-astronaut-theme.sh
       # ---
-      - flavors/mazurek.sh
+      - flavors/kutia.sh
 
   # post-run
   - from-file: shared/fonts.yml # fonts
@@ -51,8 +51,8 @@ modules:
     user:
       enabled:
         - kanshi.service
-        - noctalia-niri.service
-        - swayidle-niri.service
+        - noctalia-mango.service
+        - swayidle-mango.service
 
   #- type: gschema-overrides
   #  include:

@@ -1,5 +1,5 @@
 [Unit]
-Description=Stasis Wayland Idle Manager
+Description=Stasis Wayland Idle Manager for niri
 PartOf=graphical-session.target
 Wants=niri.service
 After=graphical-session.target

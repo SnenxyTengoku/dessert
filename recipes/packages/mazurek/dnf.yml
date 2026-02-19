@@ -33,6 +33,8 @@ install:
 
     # extra
     - cliphist
+    - gnome-keyring
+    - gnome-keyring-pam
     - matugen
     - sway-audio-idle-inhibit
     - swayidle

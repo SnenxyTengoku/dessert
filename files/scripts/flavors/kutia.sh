@@ -11,4 +11,4 @@ rm -f /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/1.png
 ln -sf /usr/share/backgrounds/catppuccin/black-hole-mocha.png /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/1.png
 
 # mpdris2-rs systemd service
-sed -i 's@Wants=mpd.service@Wants=mpd.service noctalia-niri.service@g' /usr/lib/systemd/user/mpdris2-rs.service # start it after noctalia shell starts to prevent startup issues
+sed -i 's@Wants=mpd.service@Wants=mpd.service noctalia-mango.service@g' /usr/lib/systemd/user/mpdris2-rs.service # start it after noctalia shell starts to prevent startup issues
