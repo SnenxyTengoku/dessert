@@ -23,7 +23,7 @@ include "/usr/share/mazurek/niri/environment.kdl" // environment variables
 include "/usr/share/mazurek/niri/inputs.kdl" // inputs
 
 include "/usr/share/mazurek/niri/layout.kdl" // window management layout
-include "/usr/share/mazurek/niri/eyecandy.kdl" // theming
+include "/usr/share/mazurek/niri/appearance.kdl" // global appearance
 
 include "/usr/share/mazurek/niri/fixes.kdl" // random fixes
 include "/usr/share/mazurek/niri/misc.kdl" // misc settings
