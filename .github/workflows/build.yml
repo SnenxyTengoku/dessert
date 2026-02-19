@@ -27,9 +27,9 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - flavors/wuzetka.yml
+          - flavors/kutia.yml
           - flavors/mazurek.yml
-          - flavors/mazurek-mango.yml
+          - flavors/wuzetka.yml
     steps:
       - name: Optimize build times
         shell: bash
