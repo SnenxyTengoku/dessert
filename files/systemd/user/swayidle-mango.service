@@ -1,7 +1,7 @@
 [Unit]
 Description=Swayidle Idle Manager for MangoWC
-PartOf=graphical-session.target mangowc.target
 After=graphical-session.target mangowc.target
+PartOf=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]

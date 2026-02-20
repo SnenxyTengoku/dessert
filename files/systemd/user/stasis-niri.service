@@ -1,8 +1,8 @@
 [Unit]
 Description=Stasis Wayland Idle Manager for niri
-PartOf=graphical-session.target niri.service
 After=graphical-session.target niri.service
 ConditionEnvironment=WAYLAND_DISPLAY
+PartOf=graphical-session.target
 
 [Service]
 Type=simple
