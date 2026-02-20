@@ -1,9 +1,8 @@
 [Unit]
 Description=Noctalia Shell Service for MangoWC
-PartOf=graphical-session.target
+PartOf=graphical-session.target mangowc.target
 Requisite=graphical-session.target
-Wants=mangowc.target
-After=graphical-session.target
+After=graphical-session.target mangowc.target
 
 [Service]
 ExecStart=qs -c noctalia-shell
