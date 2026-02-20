@@ -21,3 +21,4 @@ systemctl --global add-wants niri.service swayidle-niri.service
 systemctl --global add-wants mangowc.target mpdris2-rs.service
 systemctl --global add-wants mangowc.target noctalia.service
 systemctl --global add-wants mangowc.target swayidle-mango.service
+systemctl --global add-wants mangowc.target xdg-desktop-autostart.target # allows autostart entries to actually start under mangowc
