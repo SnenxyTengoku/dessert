@@ -1,5 +1,5 @@
 [Unit]
-Description=Swayidle Idle Manager
+Description=Swayidle Idle Manager for niri
 After=graphical-session.target
 PartOf=graphical-session.target
 Requisite=graphical-session.target
