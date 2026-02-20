@@ -18,12 +18,6 @@ modules:
   - from-file: shared/files.yml # shared base filesystem
   - from-file: shared/scripts.yml # default scripts selection
 
-  # mazurek files
-  - type: files
-    files:
-      - source: system/mazurek
-        destination: /
-
   # copy files and software from helper images
   - type: containerfile
     snippets:
@@ -34,6 +28,18 @@ modules:
       # -- go
       #- COPY --from=ghcr.io/snenxytengoku/helper-go /artifacts/usr /usr
 
+  # mazurek files
+  - type: files
+    files:
+      - source: system/mazurek
+        destination: /
+
+  # post-run
+  - from-file: shared/fonts.yml # fonts
+  - from-file: shared/bling.yml # ublue bling selection
+  - from-file: shared/systemd.yml # default systemd services
+
+  # scripts
   - type: script
     scripts:
       # customization
@@ -41,24 +47,13 @@ modules:
       # ---
       - flavors/mazurek.sh
 
-  # post-run
-  - from-file: shared/fonts.yml # fonts
-  - from-file: shared/bling.yml # ublue bling selection
-  - from-file: shared/systemd.yml # default systemd services
-
-  # enable noctalia shell
+  # enable systemd services
   - type: systemd
     user:
       disabled:
-        - mpdris2-rs.service # we use -niri and -mango variations for proper starting
+        - mpdris2-rs.service
       enabled:
         - kanshi.service
-        - mpdris2-rs-mango.service
-        - mpdris2-rs-niri.service
-        - noctalia-mango.service
-        - noctalia-niri.service
-        - swayidle-mango.service
-        - swayidle-niri.service
 
   #- type: gschema-overrides
   #  include:

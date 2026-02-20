@@ -11,7 +11,13 @@ rm -f /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/1.png
 ln -sf /usr/share/backgrounds/catppuccin/black-hole-mocha.png /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/1.png
 
 # mpdris2-rs systemd service
-cp /usr/lib/systemd/user/mpdris2-rs.service /usr/lib/systemd/user/mpdris2-rs-niri.service
-cp /usr/lib/systemd/user/mpdris2-rs.service /usr/lib/systemd/user/mpdris2-rs-mango.service
-sed -i 's@After=mpd.service@After=mpd.service noctalia-niri.service@g' /usr/lib/systemd/user/mpdris2-rs-niri.service # start it after noctalia shell starts to prevent startup issues for niri
-sed -i 's@After=mpd.service@After=mpd.service noctalia-mango.service@g' /usr/lib/systemd/user/mpdris2-rs-mango.service # ditto, but for mangowc
+sed -i 's@Wants=mpd.service@Wants=mpd.service noctalia.service@g' /usr/lib/systemd/user/mpdris2-rs.service
+
+# add desktop shells and utilities to their systemd services as wants
+systemctl --global add-wants niri.service mpdris2-rs.service
+systemctl --global add-wants niri.service noctalia.service
+systemctl --global add-wants niri.service swayidle-niri.service
+
+systemctl --global add-wants mangowc.target mpdris2-rs.service
+systemctl --global add-wants mangowc.target noctalia.service
+systemctl --global add-wants mangowc.target swayidle-mango.service
