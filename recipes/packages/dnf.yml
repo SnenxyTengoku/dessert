@@ -19,6 +19,7 @@ modules:
         - helium-bin
         - mullvad-vpn
         - speedtest-cli
+        - thunderbird
         - torbrowser-launcher
 
         # misc

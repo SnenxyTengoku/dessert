@@ -10,7 +10,6 @@ configurations:
       # internet and chat
       - io.github.moonlight_mod.moonlight-installer
       - org.gajim.Gajim
-      - org.mozilla.Thunderbird
       - org.nicotine_plus.Nicotine
       - org.qbittorrent.qBittorrent
       - org.signal.Signal
