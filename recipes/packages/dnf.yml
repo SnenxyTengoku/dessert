@@ -4,7 +4,6 @@ modules:
       cleanup: true
       nonfree: negativo17
       copr:
-        - imput/helium
         - sneexy/zen-browser
         - wezfurlong/wezterm-nightly
         - wojnilowicz/ungoogled-chromium
@@ -17,12 +16,10 @@ modules:
       packages:
         # web
         - firefox
-        - helium-bin
         - mullvad-vpn
         - speedtest-cli
         - thunderbird
         - torbrowser-launcher
-        - zen-browser
 
         # misc
         - docker-compose
