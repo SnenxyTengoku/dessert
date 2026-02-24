@@ -61,6 +61,7 @@ dnf install -y "cmake(KDecoration2)" \
     kf6-kwidgetsaddons-devel \
     kwin-devel \
     libdrm \
+    libdrm-devel \
     libepoxy-devel \
     libplasma-devel \
     ninja-build \
