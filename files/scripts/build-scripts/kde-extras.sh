@@ -66,6 +66,7 @@ dnf install -y "cmake(KDecoration2)" \
     ninja-build \
     nodejs-npm \
     perl-YAML-LibYAML \
+    plasma-activities-devel \
     plasma5support-devel \
     qt5-qttools-devel \
     qt6-qtbase-private-devel \
