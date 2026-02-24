@@ -152,10 +152,10 @@ mv LICENSE.md /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.
 #
 # kara
 #
-mkdir -p /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.dhruv8sh.kara
 cd /tmp
 git clone --single-branch --depth=1 https://github.com/dhruv8sh/kara.git
 cd kara
-mv contents /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.dhruv8sh.kara
-mv LICENSE /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.dhruv8sh.kara
-mv metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.dhruv8sh.kara
+mkdir -p build; cd build
+cmake .. -DCMAKE_INSTALL_PREFIX="/usr" -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_USE_QT_SYS_PATHS=OFF
+make -j$(nproc)
+make install
