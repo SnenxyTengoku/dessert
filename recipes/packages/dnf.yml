@@ -22,6 +22,7 @@ modules:
         - torbrowser-launcher
 
         # misc
+        - age
         - docker-compose
         - mpv
         - nextcloud-client
