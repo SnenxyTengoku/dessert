@@ -58,6 +58,7 @@ dnf install -y "cmake(KDecoration2)" \
     go-task \
     kf6-kcmutils-devel \
     kf6-kconfigwidgets-devel \
+    kf5-kitemmodels-devel \
     kf6-kwidgetsaddons-devel \
     kwin-devel \
     libdrm \
