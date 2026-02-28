@@ -14,7 +14,7 @@ ln -sf /usr/share/backgrounds/catppuccin/black-hole-mocha.png /usr/share/sddm/th
 #systemctl --global add-wants niri.service noctalia.service
 #systemctl --global add-wants niri.service swayidle-niri.service
 
-systemctl --global add-wants mangowc.target noctalia.service
+#systemctl --global add-wants mangowc.target noctalia.service
 systemctl --global add-wants mangowc.target swayidle-mango.service
 systemctl --global add-wants mangowc.target xdg-desktop-autostart.target # allows autostart entries to actually start under mangowc
 

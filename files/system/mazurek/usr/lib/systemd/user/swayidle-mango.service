@@ -9,6 +9,3 @@ Requisite=graphical-session.target
 # 15 seconds after locking to turn off displays
 ExecStart=/usr/bin/swayidle -w timeout 480 'qs -c noctalia-shell ipc call lockScreen lock' timeout 495 'niri msg action power-off-monitors' before-sleep 'qs -c noctalia-shell ipc call lockScreen lock'
 Restart=on-failure
-
-[Install]
-WantedBy=graphical-session.target
