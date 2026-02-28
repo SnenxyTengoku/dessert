@@ -22,3 +22,4 @@ systemctl --global add-wants mangowc.target swayidle-mango.service
 systemctl --global add-wants mangowc.target xdg-desktop-autostart.target # allows autostart entries to actually start under mangowc
 
 systemctl --global add-wants noctalia.service mpdris2-rs.service # start mpdris2-rs after noctalia to prevent crashing for it starting before daemons are available
+systemctl --global add-wants noctalia.service syncthingtray.server # ensure syncthing tray starts after noctalia's tray is available
