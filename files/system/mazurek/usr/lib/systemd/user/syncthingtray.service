@@ -1,8 +1,6 @@
 [Unit]
 Description=Syncthing Tray
 After=graphical-session.target
-PartOf=graphical-session.target
-Requisite=graphical-session.target
 
 [Service]
 ExecStart=/usr/bin/syncthingtray-qt6
