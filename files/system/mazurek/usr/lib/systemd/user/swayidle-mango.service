@@ -1,8 +1,6 @@
 [Unit]
 Description=Swayidle Idle Manager for MangoWC
 After=graphical-session.target
-PartOf=graphical-session.target
-Requisite=graphical-session.target
 
 [Service]
 # wait for 8 minutes of no activity before locking screen

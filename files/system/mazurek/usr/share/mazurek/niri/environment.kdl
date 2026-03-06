@@ -13,8 +13,7 @@ environment {
 // 📖 https://niri-wm.github.io/niri/Configuration:-Miscellaneous#spawn-at-startup
 
 spawn-at-startup "qs" "-c" "noctalia-shell" // noctalia shell
-spawn-at-startup "mpdris2-rs"
+spawn-at-startup "mpdris2-rs" // mpdris2-rs - mpris bridge for mpd
 
-spawn-at-startup "syncthingtray-qt6" "--wait" // syncthing tray
+spawn-at-startup "syncthingtray-qt6" "--wait" // syncthing tray applet
 spawn-at-startup "kdeconnect-indicator" // KDE Connect indicator
-//spawn-at-startup "sway-audio-idle-inhibit" // SwayAudioIdleInhibit, pauses swayidle while media is playing
