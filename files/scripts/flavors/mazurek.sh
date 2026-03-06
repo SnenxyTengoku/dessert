@@ -11,12 +11,12 @@ rm -f /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/1.png
 ln -sf /usr/share/backgrounds/catppuccin/black-hole-mocha.png /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/1.png
 
 # add desktop shells and utilities to their systemd services as wants
-systemctl --global add-wants niri.service noctalia.service
+#systemctl --global add-wants niri.service noctalia.service
 #systemctl --global add-wants niri.service swayidle-niri.service # noctalia includes its own idle manager now
 
 systemctl --global add-wants mangowc.target noctalia.service
 systemctl --global add-wants mangowc.target swayidle-mango.service
 systemctl --global add-wants mangowc.target xdg-desktop-autostart.target # allows autostart entries to actually start under mangowc
 
-systemctl --global add-wants noctalia.service mpdris2-rs.service # start mpdris2-rs after noctalia to prevent crashing for it starting before daemons are available
-systemctl --global add-wants noctalia.service syncthingtray.service # syncthing tray wants a tray, so start it after noctalia
+#systemctl --global add-wants noctalia.service mpdris2-rs.service # start mpdris2-rs after noctalia to prevent crashing for it starting before daemons are available
+#systemctl --global add-wants noctalia.service syncthingtray.service # syncthing tray wants a tray, so start it after noctalia
