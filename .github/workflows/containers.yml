@@ -132,7 +132,7 @@ jobs:
                   password: ${{ secrets.GITHUB_TOKEN }}
 
             # Sign container
-            - uses: sigstore/cosign-installer@v4.0.0
+            - uses: sigstore/cosign-installer@v4.1.0
               if: github.event_name != 'pull_request'
 
             - name: Sign container image
