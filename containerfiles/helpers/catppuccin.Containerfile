@@ -12,7 +12,7 @@ RUN chmod +x /tmp/build-scripts/catppuccin/gtk.sh && \
 FROM fedora:${IMAGE_MAJOR_VERSION}
 
 RUN mkdir -p /artifacts/usr
-RUN mkdir -p /artifacts/etc
+#RUN mkdir -p /artifacts/etc
 
 COPY --from=catppuccin /artifacts/catppuccin-gtk/usr /artifacts/usr
-COPY --from=catppuccin /artifacts/catppuccin-gtk/etc /artifacts/etc
+#COPY --from=catppuccin /artifacts/catppuccin-gtk/etc /artifacts/etc
