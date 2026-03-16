@@ -160,6 +160,6 @@ cd /tmp
 git clone --single-branch --depth=1 https://github.com/dhruv8sh/kara.git
 cd kara
 mkdir -p build; cd build
-cmake .. -DCMAKE_INSTALL_PREFIX="/usr" -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_USE_QT_SYS_PATHS=OFF
+cmake .. -DCMAKE_INSTALL_PREFIX="/artifacts/kde-extras-built/usr" -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_USE_QT_SYS_PATHS=OFF
 make -j$(nproc)
 make install
