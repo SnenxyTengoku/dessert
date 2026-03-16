@@ -152,4 +152,4 @@ cmake .. -DCMAKE_INSTALL_PREFIX="/artifacts/kde-extras-built/usr" -DCMAKE_BUILD_
 make -j$(nproc)
 make install
 # the module doesn't get installed to the correct location for some reason, so we just copy it manually
-mkdir -p mv /artifacts/kde-extras-built/usr/lib64/qt6/qml/org/dhruv8sh; mv /usr/lib64/qt6/qml/org/dhruv8sh /artifacts/kde-extras-built/usr/lib64/qt6/qml/org
+mkdir -p /artifacts/kde-extras-built/usr/lib64/qt6/qml/org/dhruv8sh; mv /usr/lib64/qt6/qml/org/dhruv8sh /artifacts/kde-extras-built/usr/lib64/qt6/qml/org
