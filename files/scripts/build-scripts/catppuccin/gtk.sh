@@ -16,7 +16,7 @@ cd Colloid-gtk-theme
 # Install theme
 # NOTE: Specifying "catpuccin black" is mocha.
 chmod +x install.sh
-./install.sh -d /artifacts/catppuccin-gtk/usr/share/themes -c dark -t green -s compact --tweaks catppuccin black
-./install.sh -d /artifacts/catppuccin-gtk/usr/share/themes -c light -t green -s compact --tweaks catppuccin
-./install.sh -d /artifacts/catppuccin-gtk/etc/skel/.local/share/themes -c dark -t green -s compact --tweaks catppuccin black
-./install.sh -d /artifacts/catppuccin-gtk/etc/skel/.local/share/themes -c light -t green -s compact --tweaks catppuccin
+./install.sh -d /artifacts/catppuccin-gtk/usr/share/themes -c dark -t green -s standard --tweaks catppuccin black
+./install.sh -d /artifacts/catppuccin-gtk/usr/share/themes -c light -t green -s standard --tweaks catppuccin
+./install.sh -d /artifacts/catppuccin-gtk/etc/skel/.local/share/themes -c dark -t green -s standard --tweaks catppuccin black
+./install.sh -d /artifacts/catppuccin-gtk/etc/skel/.local/share/themes -c light -t green -s standard --tweaks catppuccin
