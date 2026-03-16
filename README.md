@@ -44,17 +44,10 @@ to rebase an existing atomic Fedora installation to the latest build:
   systemctl reboot
   ```
 
-> [!CAUTION]
-> ideally, our images prefer using bootc instead of rpm-ostree for managing deployements. if you've used rpm-ostree to install packages or otherwise have made your own modifications, chances are they will conflict with bootc until you reset/revert them.
+> [!NOTE]
+> our images prefer using bootc instead of rpm-ostree for managing automated tasks, like updates. if you've used rpm-ostree to install packages or otherwise have made your own modifications, chances are they will conflict with bootc until you reset/revert them.
 >
-> if you're already on a bootc-based installation, migrating is made easier:
-> ```
-> sudo bootc switch ghcr.io/SnenxyTengoku/<flavor>:latest
-> ```
-> then simply:
-> ```
-> systemctl reboot
-> ```
+> if you're migrating to our image, however, and you already use `bootc`, one can simply migrate to our image via an `sudo bootc switch ghcr.io/SnenxyTengoku/<flavor>:latest` and reboot! *however*, in order to finalize the upgrade to the properly signed image, you'll need to the follow the last few steps of the rebasing process with rpm-ostree.
 
 the `latest` tag will automatically point to the latest build. that build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
