@@ -122,15 +122,15 @@ mv package/translate /artifacts/kde-extras-built/usr/share/plasma/plasmoids/KdeC
 mv package/metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/KdeControlStation
 
 #
-# Window Title Applet
+# Application Title Bar
 #
-mkdir -p /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.kde.windowtitle
+mkdir -p /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.github.antroids.application-title-bar
 cd /tmp
-git clone --single-branch --depth=1 https://github.com/dhruv8sh/plasma6-window-title-applet.git
-cd plasma6-window-title-applet
-mv contents /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.kde.windowtitle
-mv LICENSE /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.kde.windowtitle
-mv metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.kde.windowtitle
+git clone --single-branch --depth=1 https://github.com/antroids/application-title-bar
+cd application-title-bar
+mv LICENSE /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.github.antroids.application-title-bar
+mv package/contents /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.github.antroids.application-title-bar
+mv package/metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.github.antroids.application-title-bar
 
 #
 # PlasMusic Toolbar
@@ -142,24 +142,12 @@ cd plasmusic-toolbar
 mv ./src/* /artifacts/kde-extras-built/usr/share/plasma/plasmoids/plasmusic-toolbar
 
 #
-# Overview
-#
-mkdir -p /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.kde.plasma.overview
-cd /tmp
-git clone --single-branch --depth=1 https://github.com/HimDek/Overview-Widget-for-Plasma.git
-cd Overview-Widget-for-Plasma
-mv contents /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.kde.plasma.overview
-mv metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.kde.plasma.overview
-mv index.html /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.kde.plasma.overview
-mv LICENSE.md /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.himdek.kde.plasma.overview
-
-#
 # kara
 #
 cd /tmp
 git clone --single-branch --depth=1 https://github.com/dhruv8sh/kara.git
 cd kara
 mkdir -p build; cd build
-cmake .. -DCMAKE_INSTALL_PREFIX="/artifacts/kde-extras-built/usr" -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_USE_QT_SYS_PATHS=OFF
+cmake .. -DCMAKE_INSTALL_PREFIX="/artifacts/kde-extras-built/usr" -DCMAKE_BUILD_TYPE=Release
 make -j$(nproc)
 make install
