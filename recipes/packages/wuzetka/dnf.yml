@@ -14,16 +14,12 @@ install:
     # "Office"
     - merkuro
 
-    # misc
-    - nextcloud-client-dolphin
-
     # environment
     - pavucontrol-qt
 
     # themes
     - darkly
     - oxygen-sounds
-    - yaru-sound-theme
 
     # kde
     - ark
@@ -42,6 +38,7 @@ install:
     - ksystemlog
     - kweather
     - kwin-effect-roundcorners
+    - nextcloud-client-dolphin
     - okular
     - syncthingctl-qt6
     - syncthingfileitemaction-qt6
@@ -56,8 +53,6 @@ install:
     - kdepim-addons
     - qt6-qt5compat
     - qt6-qtdeclarative
+    - qt6-qtlocation
     - qt6-qtsvg
     - translate-shell
-
-    # other
-    - qt6-qtlocation
