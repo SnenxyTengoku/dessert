@@ -29,7 +29,7 @@ modules:
     snippets:
       # -- catppuccin
       - COPY --from=ghcr.io/snenxytengoku/helper-catppuccin /artifacts/usr /usr
-      - COPY --from=ghcr.io/snenxytengoku/helper-catppuccin /artifacts/etc /etc
+      #- COPY --from=ghcr.io/snenxytengoku/helper-catppuccin /artifacts/etc /etc
       # -- cargo
       - COPY --from=ghcr.io/snenxytengoku/helper-cargo /artifacts/usr /usr
       # -- go

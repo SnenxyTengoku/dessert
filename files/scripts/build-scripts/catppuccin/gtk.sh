@@ -5,7 +5,7 @@ set -euox pipefail
 # However, the theme it was based on, Colloid, includes catppuccin officially, so we just use that now.
 
 # Create theme directory
-mkdir -p /artifacts/catppuccin-gtk/etc/skel/.local/share/themes
+mkdir -p /artifacts/catppuccin-gtk/usr/share/themes
 
 # Dependencies to create theme
 dnf install -y git sassc inkscape optipng gnome-themes-extra gtk-murrine-engine
@@ -18,5 +18,3 @@ cd Colloid-gtk-theme
 chmod +x install.sh
 ./install.sh -d /artifacts/catppuccin-gtk/usr/share/themes -c dark -t green -s standard --tweaks catppuccin black
 ./install.sh -d /artifacts/catppuccin-gtk/usr/share/themes -c light -t green -s standard --tweaks catppuccin
-./install.sh -d /artifacts/catppuccin-gtk/etc/skel/.local/share/themes -c dark -t green -s standard --tweaks catppuccin black
-./install.sh -d /artifacts/catppuccin-gtk/etc/skel/.local/share/themes -c light -t green -s standard --tweaks catppuccin
