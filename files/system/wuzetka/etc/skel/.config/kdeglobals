@@ -119,6 +119,7 @@ ForegroundPositive=166, 227, 161
 ForegroundVisited=203, 166, 247
 
 [General]
+BrowserApplication=helium.desktop
 ColorSchemeHash=c450872dc068bdb11b46a0d8e2343caf9b60972f
 TerminalApplication=wezterm start --cwd .
 TerminalService=org.wezfurlong.wezterm.desktop
@@ -136,6 +137,8 @@ Theme=Papirus-Dark
 
 [KDE]
 LookAndFeelPackage=Catppuccin-Mocha-Green
+contrast=4
+frameContrast=0.2
 widgetStyle=Darkly
 
 [KFileDialog Settings]
@@ -156,7 +159,7 @@ Speedbar Width=164
 View Style=Simple
 
 [Sounds]
-Theme=Pop
+Theme=ocean
 
 [WM]
 activeBackground=30,30,46
