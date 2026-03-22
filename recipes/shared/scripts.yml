@@ -2,9 +2,9 @@ type: script
 scripts:
   - base.sh
   # are these even required anymore lol
-  - fixes/ld.sh
-  - fixes/qdbus.sh
-  - fixes/firmware-finalize.sh
+  #- fixes/ld.sh
+  #- fixes/qdbus.sh
+  #- fixes/firmware-finalize.sh
   # customization
   - additions/posy-cursors.sh
   - additions/papirus.sh
