@@ -118,18 +118,19 @@ modules:
 
         # other
         - butane
+        - ddcutil
         - dmg2img
         - fontconfig
         - genisoimage
         - gnome-themes-extra
         - hunspell-en
         - iwd
-        - ddcutil
         - libguestfs
         - lzip
         - net-tools
         - p7zip
         - podlet
+        - rocm-opencl
         - rsms-inter-fonts
         - screen
         - tesseract
