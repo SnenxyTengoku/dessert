@@ -105,7 +105,6 @@ modules:
         - ffmpeg
         - figlet
         - fzf
-        - ImageMagick
         - knock
         - krabby
         - neovim
@@ -117,9 +116,7 @@ modules:
         - zsh
 
         # other
-        - butane
-        - ddcutil
-        - dmg2img
+        - ImageMagick
         - fontconfig
         - genisoimage
         - gnome-themes-extra
@@ -130,7 +127,6 @@ modules:
         - net-tools
         - p7zip
         - podlet
-        - rocm-opencl
         - rsms-inter-fonts
         - screen
         - tesseract
