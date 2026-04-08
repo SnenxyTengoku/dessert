@@ -20,9 +20,10 @@ configurations:
 
       # media production, editing software
       - com.github.taiko2k.avvie
+      - com.github.wwmm.easyeffects
       - com.obsproject.Studio
-      - com.obsproject.Studio.Plugin.Gstreamer
       - com.obsproject.Studio.Plugin.GStreamerVaapi
+      - com.obsproject.Studio.Plugin.Gstreamer
       - com.obsproject.Studio.Plugin.OBSVkCapture
       - io.gitlab.adhami3310.Footage
       - io.lmms.LMMS
