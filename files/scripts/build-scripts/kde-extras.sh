@@ -103,12 +103,30 @@ version=${latest_version#v}
 curl -Lo "/tmp/plasma-panel-colorizer.tar.gz" "https://github.com/luisbocanegra/plasma-panel-colorizer/archive/refs/tags/"$latest_version".tar.gz"
 tar -xf /tmp/plasma-panel-colorizer.tar.gz --one-top-level=/tmp/plasma-panel-colorizer
 cd plasma-panel-colorizer/plasma-panel-colorizer-$version
-#chmod +x package-plasmoid.sh
-#./package-plasmoid.sh
-#unzip plasmoid-panel-colorizer-v*.plasmoid -d /artifacts/kde-extras-built/usr/share/plasma/plasmoids/luisbocanegra.panel.colorizer
 cmake -B build -S . -DINSTALL_PLASMOID=ON -DBUILD_PLUGIN=ON
 cmake --build build
 DESTDIR="/artifacts/kde-extras-built" cmake --install build
+
+#
+# Panel Colorizer Islands Separator
+#
+mkdir -p /artifacts/kde-extras-built/usr/share/plasma/plasmoids/luisbocanegra.panel.colorizer.islands.separator
+cd /tmp
+git clone --single-branch --depth=1 https://github.com/luisbocanegra/plasma-panel-colorizer-islands-separator.git
+cd plasma-panel-colorizer-islands-separator
+mv package/contents /artifacts/kde-extras-built/usr/share/plasma/plasmoids/luisbocanegra.panel.colorizer.islands.separator
+mv package/metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/luisbocanegra.panel.colorizer.islands.separator
+
+#
+# Advanced separator
+#
+mkdir -p /artifacts/kde-extras-built/usr/share/plasma/plasmoids/luisbocanegra.advanced_separator
+cd /tmp
+git clone --single-branch --depth=1 https://github.com/luisbocanegra/plasma-advanced-separator.git
+cd plasma-advanced-separator
+mv package/contents /artifacts/kde-extras-built/usr/share/plasma/plasmoids/luisbocanegra.advanced_separator
+mv package/translate /artifacts/kde-extras-built/usr/share/plasma/plasmoids/luisbocanegra.advanced_separator
+mv package/metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/luisbocanegra.advanced_separator
 
 #
 # KDE Control Station
