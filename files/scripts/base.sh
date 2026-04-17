@@ -26,4 +26,6 @@ curl -sL -o /usr/share/man/man1/tldr.1 https://raw.githubusercontent.com/tldr-pa
 cd /tmp
 git clone https://github.com/MrOtherGuy/fx-autoconfig.git
 cd fx-autoconfig
-mv -f program/* /usr/lib64/firefox
+mkdir -p /usr/lib64/firefox/defaults/pref
+mv program/defaults/pref/* /usr/lib64/firefox/defaults/pref
+mv program/config.js /usr/lib64/firefox
