@@ -171,17 +171,6 @@ mv contents /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.kde.plasm
 mv metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/org.kde.plasma.kvitals
 
 #
-# SysPeek
-#
-mkdir -p /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.pras.syspeek
-cd /tmp
-git clone --single-branch --depth=1 https://github.com/prassamin/SysPeek.git
-cd SysPeek
-mv LICENSE.md /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.pras.syspeek
-mv contents /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.pras.syspeek
-mv metadata.json /artifacts/kde-extras-built/usr/share/plasma/plasmoids/com.pras.syspeek
-
-#
 # kara
 #
 cd /tmp
