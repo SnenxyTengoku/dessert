@@ -21,3 +21,9 @@ curl -sL -o /usr/share/bash-completion/completions/tldr https://raw.githubuserco
 curl -sL -o /usr/share/zsh/site-functions/_tldr https://raw.githubusercontent.com/tldr-pages/tlrc/main/completions/_tldr
 curl -sL -o /usr/share/fish/vendor_completions.d/tldr.fish https://raw.githubusercontent.com/tldr-pages/tlrc/main/completions/tldr.fish
 curl -sL -o /usr/share/man/man1/tldr.1 https://raw.githubusercontent.com/tldr-pages/tlrc/main/tldr.1
+
+# fx-autoconfig
+cd /tmp
+git clone https://github.com/MrOtherGuy/fx-autoconfig.git
+cd fx-autoconfig
+mv program/* /usr/lib64/firefox
