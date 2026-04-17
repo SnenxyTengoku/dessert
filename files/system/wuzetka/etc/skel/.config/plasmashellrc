@@ -17,7 +17,7 @@ popupHeight=303
 popupWidth=374
 
 [Applets][33][Configuration][Appearance]
-showTemperatureInCompactMode=true
+showTempe`atureInCompactMode=true
 
 [Applets][33][Configuration][ConfigDialog]
 DialogHeight=510
@@ -36,13 +36,18 @@ visibilityUnit=2024
 [PIMEventsPlugin]
 calendars=94,142,143,144,145,146,147,148,149,150
 
+[PlasmaTransientsConfig]
+popupHeight=400
+popupWidth=560
+
 [PlasmaViews][Panel 139]
-floating=1
+floating=0
+floatingApplets=1
 panelLengthMode=1
 panelVisibility=2
 
 [PlasmaViews][Panel 139][Defaults]
-thickness=40
+thickness=52
 
 [PlasmaViews][Panel 97]
 floating=0
