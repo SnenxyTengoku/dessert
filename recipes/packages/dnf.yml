@@ -8,6 +8,7 @@ modules:
         - wezfurlong/wezterm-nightly
         - wojnilowicz/ungoogled-chromium
       files:
+        - https://download.opensuse.org/repositories/home:mkittler/Fedora_43/home:mkittler.repo # hardcoded version because they take a while to bump to latest fedora when it releases
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
@@ -115,6 +116,11 @@ modules:
         - yt-dlp
         - zoxide
         - zsh
+
+        # syncthing
+        - syncthingctl-qt6
+        - syncthingfileitemaction-qt6
+        - syncthingtray-qt6
 
         # other
         - ImageMagick

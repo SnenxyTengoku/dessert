@@ -40,10 +40,7 @@ install:
     - kwin-effect-roundcorners
     - nextcloud-client-dolphin
     - okular
-    - syncthingctl-qt6
-    - syncthingfileitemaction-qt6
     - syncthingplasmoid-qt6
-    - syncthingtray-qt6
 
     # kde libraries
     - ffmpegthumbs

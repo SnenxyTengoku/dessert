@@ -1,4 +1,4 @@
-ARG IMAGE_MAJOR_VERSION=43
+ARG IMAGE_MAJOR_VERSION=44
 
 # Packages built with go
 FROM fedora:${IMAGE_MAJOR_VERSION} as go

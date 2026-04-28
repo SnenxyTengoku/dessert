@@ -4,7 +4,6 @@ repos:
   nonfree: negativo17
   files:
     - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-    - https://download.opensuse.org/repositories/home:mkittler/Fedora_43/home:mkittler.repo # hardcoded version because they take a while to bump to latest fedora when it releases
 install:
   skip-unavailable: true
   packages:
@@ -18,11 +17,6 @@ install:
     - dolphin-plugins
     - kate
     - kde-connect
-
-    # syncthing
-    - syncthingctl-qt6
-    - syncthingfileitemaction-qt6
-    - syncthingtray-qt6
 
     # themes
     - adw-gtk3-theme
