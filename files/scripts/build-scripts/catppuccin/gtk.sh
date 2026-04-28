@@ -8,7 +8,7 @@ set -euox pipefail
 mkdir -p /artifacts/catppuccin-gtk/usr/share/themes
 
 # Dependencies to create theme
-dnf install -y git sassc inkscape optipng gnome-themes-extra gtk-murrine-engine
+dnf install -y git sassc inkscape optipng gtk-murrine-engine
 cd /tmp
 # Clone repository into /tmp/gtk
 git clone https://github.com/vinceliuice/Colloid-gtk-theme.git
