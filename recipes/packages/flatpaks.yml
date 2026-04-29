@@ -9,6 +9,7 @@ configurations:
     install:
       # internet and chat
       - io.github.moonlight_mod.moonlight-installer
+      - org.equicord.equibop
       - org.gajim.Gajim
       - org.nicotine_plus.Nicotine
       - org.qbittorrent.qBittorrent
