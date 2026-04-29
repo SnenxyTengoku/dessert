@@ -101,8 +101,8 @@ cd /tmp
 latest_version=$(curl -s https://api.github.com/repos/luisbocanegra/plasma-panel-colorizer/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
 version=${latest_version#v}
 curl -Lo "/tmp/plasma-panel-colorizer.tar.gz" "https://github.com/luisbocanegra/plasma-panel-colorizer/archive/refs/tags/"$latest_version".tar.gz"
-tar -xf /tmp/plasma-panel-colorizer.tar.gz --one-top-level=/tmp/plasma-panel-colorizer
-cd plasma-panel-colorizer/plasma-panel-colorizer-$version
+tar -xf /tmp/plasma-panel-colorizer.tar.gz
+cd plasma-panel-colorizer-$version
 cmake -B build -S . -DINSTALL_PLASMOID=ON -DBUILD_PLUGIN=ON
 cmake --build build
 DESTDIR="/artifacts/kde-extras-built" cmake --install build
