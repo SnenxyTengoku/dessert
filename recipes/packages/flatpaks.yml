@@ -43,6 +43,7 @@ configurations:
       - com.rustdesk.RustDesk
       - com.usebottles.bottles
       - fr.handbrake.ghb
+      - io.github.martchus.syncthingtray
       - io.github.seadve.Mousai
       - io.gitlab.azymohliad.WatchMate
       - it.mijorus.gearlever
