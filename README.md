@@ -1,3 +1,6 @@
+> [!WARNING]
+> archived. realized having an immutable base for a system isn't something that actually "changes" how my workflow goes, or provides any benefits personally to me. feel free to look and maybe steal some snippets, but that's all.
+
 # dessert &nbsp; [![image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build.yml) [![python-validity image builds badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-validity.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/build-validity.yml) [![containers build badge](https://github.com/SnenxyTengoku/dessert/actions/workflows/containers.yml/badge.svg)](https://github.com/SnenxyTengoku/dessert/actions/workflows/containers.yml)
 
 custom [Atomic](https://docs.fedoraproject.org/en-US/emerging) [Fedora](https://fedoraproject.org) images built using [BlueBuild](https://blue-build.org), based on the extra works of [Universal Blue](https://universal-blue.org).
